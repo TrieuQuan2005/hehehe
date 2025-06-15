@@ -1,0 +1,35 @@
+﻿@model hehehe.Models.UserForm
+
+<h2>Thông tin đã nộp của bạn</h2>
+
+<table>
+    <tr>
+        <td><b>Họ tên:</b></td>
+        <td>@Model.HoTen</td>
+    </tr>
+    <tr>
+        <td><b>Ngày sinh:</b></td>
+        <td>@Model.NgaySinh.ToString("dd/MM/yyyy")</td>
+    </tr>
+    <tr>
+        <td><b>Điểm thi:</b></td>
+        <td>@Model.DiemThi</td>
+    </tr>
+    <tr>
+        <td><b>File upload:</b></td>
+        <td>
+            @if (!string.IsNullOrEmpty(Model.UploadedFilePath))
+            {
+                <a href="@Model.UploadedFilePath" target="_blank">Xem file</a>
+            }
+            else
+            {
+                <i>(Không có file)</i>
+            }
+        </td>
+    </tr>
+</table>
+
+<p style="color:red;">
+    <strong>Lưu ý:</strong> Bạn đã bị khóa form và không thể chỉnh sửa thông tin nữa.
+</p>

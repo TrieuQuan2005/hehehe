@@ -1,0 +1,47 @@
+﻿@model Tuple<string, List<hehehe.Models.UserForm>>
+
+<h3>@Model.Item1</h3>
+
+<table border="1" cellpadding="6">
+    <thead>
+    <tr>
+        <th>Mã nhập học</th>
+        <th>Họ tên</th>
+        <th>Ngày sinh</th>
+        <th>Điểm thi</th>
+        <th>File</th>
+        <th>Trạng thái</th>
+        <th>Thao tác</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var form in Model.Item2)
+    {
+        <tr>
+            <td>@form.MaNhapHoc</td>
+            <td>@form.HoTen</td>
+            <td>@form.NgaySinh.ToString("dd/MM/yyyy")</td>
+            <td>@form.DiemThi</td>
+            <td>
+                @if (!string.IsNullOrEmpty(form.UploadedFilePath))
+                {
+                    <a href="@form.UploadedFilePath" target="_blank">Xem</a>
+                }
+                else
+                {
+                    <em>Chưa có</em>
+                }
+            </td>
+            <td>@(form.IsLocked ? "🔒 Đã khóa" : "🔓 Mở")</td>
+            <td>
+                <form method="post" asp-action="ToggleLock" asp-controller="Admin">
+                    <input type="hidden" name="id" value="@form.MaNhapHoc" />
+                    <button type="submit">
+                        @(form.IsLocked ? "Mở khóa" : "Khóa")
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

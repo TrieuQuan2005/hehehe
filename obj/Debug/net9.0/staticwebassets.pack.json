@@ -257,6 +257,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\AT200147\\AT200147_20250614_1912.pdf",
+      "PackagePath": "staticwebassets\\uploads\\AT200147\\AT200147_20250614_1912.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\admin\\admin_20250614_1910.pdf",
+      "PackagePath": "staticwebassets\\uploads\\admin\\admin_20250614_1910.pdf"
+    },
+    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.hehehe.props",
       "PackagePath": "build\\hehehe.props"
     },

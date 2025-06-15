@@ -1,0 +1,13 @@
+﻿@{
+    var atForms = ViewBag.AT as List<hehehe.Models.UserForm>;
+    var ctForms = ViewBag.CT as List<hehehe.Models.UserForm>;
+    var dtForms = ViewBag.DT as List<hehehe.Models.UserForm>;
+}
+
+<h2>Quản lý form sinh viên</h2>
+
+@await Html.PartialAsync("_FormTable", Tuple.Create("📚 An toàn thông tin (AT)", atForms))
+<br />
+@await Html.PartialAsync("_FormTable", Tuple.Create("💻 Công nghệ thông tin (CT)", ctForms))
+<br />
+@await Html.PartialAsync("_FormTable", Tuple.Create("🔧 Điện tử vi mạch (DT)", dtForms))

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace hehehe.Models
 {
-    public class StudentForm
+    public class UserForm
     {
         [Key]
         [ForeignKey("User")]

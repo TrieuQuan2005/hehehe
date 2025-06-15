@@ -1,24 +1,25 @@
-﻿@model hehehe.Models.StudentForm
+﻿@model hehehe.Models.UserForm
+
 @{
-    ViewData["Title"] = "Form";
+    ViewData["Title"] = "Form nhập thông tin";
 }
 
-<h2>Form nhập thông tin - @ViewBag.Department</h2>
+<h2>Form nhập thông tin ngành: @ViewBag.Department</h2>
 
 <form asp-action="FormNhapThongTin" method="post" enctype="multipart/form-data">
     <div>
-        <label for="FullName">Họ và tên:</label>
-        <input type="text" name="FullName" value="@Model?.FullName" required />
+        <label for="HoTen">Họ và tên:</label>
+        <input type="text" name="HoTen" value="@Model?.HoTen" required />
     </div>
 
     <div>
-        <label for="StudentCode">Mã số sinh viên:</label>
-        <input type="text" name="StudentCode" value="@Model?.StudentCode" required />
+        <label for="NgaySinh">Ngày sinh:</label>
+        <input type="date" name="NgaySinh" value="@Model?.NgaySinh.ToString("yyyy-MM-dd")" required />
     </div>
 
     <div>
-        <label for="Note">Ghi chú:</label>
-        <textarea name="Note">@Model?.Note</textarea>
+        <label for="DiemThi">Điểm thi:</label>
+        <input type="number" step="0.01" name="DiemThi" value="@Model?.DiemThi" required />
     </div>
 
     <div>
@@ -33,7 +34,7 @@
     <button type="submit">Lưu</button>
 </form>
 
-@if (ViewBag.Message != null)
+@if (TempData["Message"] != null)
 {
-    <p style="color:green">@ViewBag.Message</p>
+    <p style="color:green">@TempData["Message"]</p>
 }
