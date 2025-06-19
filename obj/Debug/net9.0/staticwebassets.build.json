@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r2VzyO4OLL4HVh7sc3l51P/OBcZloEU/+zScC6h7fa8=",
+  "Hash": "YOy2N4R4oDmarTUnnMaKXmfUiCuUrnQo1GEp6Mc0ZQo=",
   "Source": "hehehe",
   "BasePath": "_content/hehehe",
   "Mode": "Default",
@@ -1443,6 +1443,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\images\\logo.png",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "images/logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "95besrk8fr",
+      "Integrity": "E6jOfMlKa5+nZslP9gYZGer8bk+bG+BbgDJDvITamSs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\images\\text.png",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "images/text#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gk2aevxotq",
+      "Integrity": "gOWjzAoHSzJ6gBeInINXyXaayt6hcqiXKQQPcFSZD6w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\text.png"
     },
     {
       "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\js\\site.js",
@@ -3958,6 +4000,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-HMzU7Lh6KmTrdclx70fLPC64KqPYecGz9u/+5NsH5Oc="
+        }
+      ]
+    },
+    {
+      "Route": "images/logo.95besrk8fr.png",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\images\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "252262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"E6jOfMlKa5+nZslP9gYZGer8bk+bG+BbgDJDvITamSs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 06:05:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "95besrk8fr"
+        },
+        {
+          "Name": "label",
+          "Value": "images/logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-E6jOfMlKa5+nZslP9gYZGer8bk+bG+BbgDJDvITamSs="
+        }
+      ]
+    },
+    {
+      "Route": "images/logo.png",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\images\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "252262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"E6jOfMlKa5+nZslP9gYZGer8bk+bG+BbgDJDvITamSs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 06:05:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-E6jOfMlKa5+nZslP9gYZGer8bk+bG+BbgDJDvITamSs="
+        }
+      ]
+    },
+    {
+      "Route": "images/text.gk2aevxotq.png",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\images\\text.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27245"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gOWjzAoHSzJ6gBeInINXyXaayt6hcqiXKQQPcFSZD6w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 06:16:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gk2aevxotq"
+        },
+        {
+          "Name": "label",
+          "Value": "images/text.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gOWjzAoHSzJ6gBeInINXyXaayt6hcqiXKQQPcFSZD6w="
+        }
+      ]
+    },
+    {
+      "Route": "images/text.png",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\images\\text.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27245"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gOWjzAoHSzJ6gBeInINXyXaayt6hcqiXKQQPcFSZD6w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 06:16:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gOWjzAoHSzJ6gBeInINXyXaayt6hcqiXKQQPcFSZD6w="
         }
       ]
     },

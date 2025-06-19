@@ -16,7 +16,9 @@ namespace hehehe.Middlewares
         {
             var path = context.Request.Path.ToString().ToLower();
 
-            if (path.StartsWith("/auth/login") || path.StartsWith("/css") || path.StartsWith("/js"))
+            // Bỏ qua Auth, static files, favicon...
+            if (path.StartsWith("/auth") || path.StartsWith("/css") || path.StartsWith("/js") ||
+                path.StartsWith("/images") || path.Contains(".") || path == "/")
             {
                 await _next(context);
                 return;

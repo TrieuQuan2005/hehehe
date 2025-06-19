@@ -105,8 +105,9 @@
             <div class="form-group">
                 <label>Giới tính:</label>
                 <select name="GioiTinh">
-                    <option value="Nam" @(Model?.GioiTinh == "Nam" ? "selected" : "")>Nam</option>
-                    <option value="Nữ" @(Model?.GioiTinh == "Nữ" ? "selected" : "")>Nữ</option>
+                    <option value="Nam" selected="@(Model?.GioiTinh == "Nam")">Nam</option>
+                    <option value="Nu" selected="@(Model?.GioiTinh == "Nu")">Nữ</option>
+
                 </select>
             </div>
         </div>
@@ -126,8 +127,9 @@
             <div class="form-group">
                 <label>Đối tượng ưu tiên:</label>
                 <select name="DoiTuongUuTien">
-                    <option value="true" @(Model?.DoiTuongUuTien == true ? "selected" : "")>Có</option>
-                    <option value="false" @(Model?.DoiTuongUuTien == false ? "selected" : "")>Không</option>
+                    <option value="true" selected="@(Model?.DoiTuongUuTien == true)">Có</option>
+                    <option value="false" selected="@(Model?.DoiTuongUuTien == false)">Không</option>
+
                 </select>
             </div>
             <div class="form-group">
@@ -249,8 +251,9 @@
             <label>Bạn đã kiểm tra kỹ thông tin?</label>
             <select name="XacNhan" required>
                 <option value="">-- Chọn --</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="Yes" selected="@(ViewBag.XacNhan == "Yes")">Yes</option>
+                <option value="No" selected="@(ViewBag.XacNhan == "No")">No</option>
+
             </select>
         </div>
 

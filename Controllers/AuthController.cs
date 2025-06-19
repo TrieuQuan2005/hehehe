@@ -2,6 +2,7 @@
 using hehehe.Data;
 using hehehe.Models;
 using Microsoft.AspNetCore.Http;
+using System.Linq;
 
 namespace hehehe.Controllers
 {
@@ -23,7 +24,6 @@ namespace hehehe.Controllers
         [HttpPost]
         public IActionResult Login(string username, string password)
         {
-            // "username" chính là MaNhapHoc
             var user = _db.Users.FirstOrDefault(u => u.MaNhapHoc == username && u.Password == password);
 
             if (user != null)
@@ -31,22 +31,13 @@ namespace hehehe.Controllers
                 HttpContext.Session.SetString("MaNhapHoc", user.MaNhapHoc);
                 HttpContext.Session.SetString("IsAdmin", user.IsAdmin.ToString());
 
-                if (user.IsAdmin)
-                {
-                    return RedirectToAction("Index", "Admin");
-                }
-
-                return RedirectToAction("FormNhapThongTin", "Form");
+                return user.IsAdmin
+                    ? RedirectToAction("Index", "Admin")
+                    : RedirectToAction("FormNhapThongTin", "Form");
             }
 
-            ViewBag.Error = "Sai tài khoản hoặc mật khẩu!";
+            ViewBag.Error = "Sai tên đăng nhập hoặc mật khẩu.";
             return View();
-        }
-
-        public IActionResult Logout()
-        {
-            HttpContext.Session.Clear();
-            return RedirectToAction("Login");
         }
     }
 }
