@@ -1,7 +1,13 @@
 ﻿using hehehe.Data;
 using hehehe.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
 
 namespace hehehe.Controllers
 {
@@ -19,113 +25,79 @@ namespace hehehe.Controllers
         [HttpGet]
         public IActionResult FormNhapThongTin()
         {
-            var maNhapHoc = HttpContext.Session.GetString("MaNhapHoc");
-            if (string.IsNullOrEmpty(maNhapHoc))
+            var ma = HttpContext.Session.GetString("MaNhapHoc");
+            if (string.IsNullOrEmpty(ma))
                 return RedirectToAction("Login", "Auth");
 
-            var prefix = maNhapHoc.Substring(0, 2).ToUpperInvariant();
-            var form = _db.StudentForms.FirstOrDefault(f => f.MaNhapHoc == maNhapHoc);
-
-            ViewBag.Department = prefix switch
+            var existing = _db.StudentForms.FirstOrDefault(x => x.MaNhapHoc == ma);
+            if (existing != null)
             {
-                "AT" => "An toàn thông tin",
-                "CT" => "Công nghệ thông tin",
-                "DT" => "Điện tử vi mạch",
-                _ => "Không xác định"
-            };
+                if (existing.IsLocked)
+                    return View("Locked");
+                return View(existing);
+            }
 
-            if (form?.IsLocked == true)
-                return View("XemThongTin", form);
-
-            return View("FormNhapThongTin", form ?? new UserForm { MaNhapHoc = maNhapHoc });
+            return View(new UserForm());
         }
 
         [HttpPost]
-        public async Task<IActionResult> FormNhapThongTin(UserForm model, IFormFile uploadedFile, string XacNhan)
+        public async Task<IActionResult> FormNhapThongTin(UserForm model, List<IFormFile> uploadedFiles)
         {
-            var maNhapHoc = HttpContext.Session.GetString("MaNhapHoc");
-            if (string.IsNullOrEmpty(maNhapHoc))
+            var ma = HttpContext.Session.GetString("MaNhapHoc");
+            if (string.IsNullOrEmpty(ma))
                 return RedirectToAction("Login", "Auth");
             
-            if (XacNhan != "Yes")
-            {
-                TempData["Message"] = "Vui lòng xác nhận thông tin trước khi lưu.";
-                return RedirectToAction("FormNhapThongTin");
-            }   
-            
-            var existing = _db.StudentForms.FirstOrDefault(f => f.MaNhapHoc == maNhapHoc);
-            if (existing?.IsLocked == true)
+            var existing = _db.StudentForms.FirstOrDefault(x => x.MaNhapHoc == ma);
+            if (existing != null && existing.IsLocked)
                 return View("Locked");
 
-            string? filePath = existing?.UploadedFilePath;
+            var savedFilePaths = new List<string>();
 
-            if (uploadedFile != null && uploadedFile.Length > 0)
+            if (uploadedFiles != null && uploadedFiles.Count > 0)
             {
-                var userFolder = Path.Combine("uploads", maNhapHoc);
-                var absoluteFolderPath = Path.Combine(_env.WebRootPath, userFolder);
-                Directory.CreateDirectory(absoluteFolderPath);
+                var userFolder = Path.Combine("uploads", ma);
+                var absolutePath = Path.Combine(_env.WebRootPath, userFolder);
+                Directory.CreateDirectory(absolutePath);
 
-                var ext = Path.GetExtension(uploadedFile.FileName);
-                var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmm");
-                var fileName = $"{maNhapHoc}_{timestamp}{ext}";
-                var fileFullPath = Path.Combine(absoluteFolderPath, fileName);
+                foreach (var file in uploadedFiles)
+                {
+                    if (file.Length > 0)
+                    {
+                        var ext = Path.GetExtension(file.FileName);
+                        var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                        var fileName = $"{ma}_{timestamp}_{Guid.NewGuid()}{ext}";
+                        var fullPath = Path.Combine(absolutePath, fileName);
 
-                using var stream = new FileStream(fileFullPath, FileMode.Create);
-                await uploadedFile.CopyToAsync(stream);
+                        using var stream = new FileStream(fullPath, FileMode.Create);
+                        await file.CopyToAsync(stream);
 
-                filePath = $"/{userFolder.Replace("\\", "/")}/{fileName}";
+                        var relativePath = $"/{userFolder.Replace("\\", "/")}/{fileName}";
+                        savedFilePaths.Add(relativePath);
+                    }
+                }
             }
 
             if (existing == null)
             {
-                model.MaNhapHoc = maNhapHoc;
-                model.UploadedFilePath = filePath;
+                model.MaNhapHoc = ma;
+                model.UploadedFiles = savedFilePaths;
                 model.IsLocked = false;
                 _db.StudentForms.Add(model);
             }
             else
             {
-                existing.HoTen = model.HoTen;
-                existing.NgaySinh = model.NgaySinh;
-                existing.GioiTinh = model.GioiTinh;
-                existing.NoiSinh = model.NoiSinh;
-                existing.DanToc = model.DanToc;
-                existing.NoiThuongTru = model.NoiThuongTru;
-                existing.ChoOHienNay = model.ChoOHienNay;
-                existing.DoiTuongUuTien = model.DoiTuongUuTien;
-                existing.KhuVuc = model.KhuVuc;
-                existing.NamNhapHoc = model.NamNhapHoc;
-                existing.NamTotNghiepTHPT = model.NamTotNghiepTHPT;
-                existing.NamNhapNgu = model.NamNhapNgu;
-                existing.NamXuatNgu = model.NamXuatNgu;
-                existing.NgayVaoDoan = model.NgayVaoDoan;
-                existing.NgayVaoDang = model.NgayVaoDang;
-                existing.NganhDaoTao = model.NganhDaoTao;
-                existing.SoDienThoai = model.SoDienThoai;
-                existing.Email = model.Email;
-                existing.HoTenBo = model.HoTenBo;
-                existing.TuoiBo = model.TuoiBo;
-                existing.NgheNghiepBo = model.NgheNghiepBo;
-                existing.SoDienThoaiBo = model.SoDienThoaiBo;
-                existing.HoTenMe = model.HoTenMe;
-                existing.TuoiMe = model.TuoiMe;
-                existing.NgheNghiepMe = model.NgheNghiepMe;
-                existing.SoDienThoaiMe = model.SoDienThoaiMe;
-                existing.BaoTinChoAi = model.BaoTinChoAi;
-                existing.DiaChiLienHe = model.DiaChiLienHe;
-                existing.UploadedFilePath = filePath;
+                model.MaNhapHoc = ma;
+                model.UploadedFiles = existing.UploadedFiles.Concat(savedFilePaths).ToList();
+                model.IsLocked = false;
 
+                _db.Entry(existing).CurrentValues.SetValues(model);
+                existing.UploadedFiles = model.UploadedFiles;
                 _db.StudentForms.Update(existing);
             }
 
             await _db.SaveChangesAsync();
-            TempData["Message"] = "Đã lưu thông tin thành công!";
+            TempData["Message"] = "Lưu thành công!";
             return RedirectToAction("FormNhapThongTin");
-        }
-
-        public IActionResult Locked()
-        {
-            return Content("Bạn không còn quyền chỉnh sửa. Thông tin đã bị khóa.");
         }
     }
 }

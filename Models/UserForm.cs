@@ -8,7 +8,7 @@ namespace hehehe.Models
     {
         [Key]
         [ForeignKey("User")]
-        public string MaNhapHoc { get; set; } = null!; // Khóa chính, trùng với mã người dùng
+        public string MaNhapHoc { get; set; } = null!; 
 
         public string HoTen { get; set; } = null!;
 
@@ -54,8 +54,7 @@ namespace hehehe.Models
         public string BaoTinChoAi { get; set; } = null!;
         public string DiaChiLienHe { get; set; } = null!;
 
-        public string? UploadedFilePath { get; set; }
-
+        public List<string> UploadedFiles { get; set; } = new List<string>();
         public bool IsLocked { get; set; } = false;
 
         // Navigation property

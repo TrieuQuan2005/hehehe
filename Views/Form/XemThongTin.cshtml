@@ -123,9 +123,12 @@
     
     <div class="form-group">
         <label>File upload:</label><br />
-        @if (!string.IsNullOrEmpty(Model.UploadedFilePath))
+        @if (Model.UploadedFiles != null && Model.UploadedFiles.Any())
         {
-            <a href="@Model.UploadedFilePath" target="_blank">Xem file</a>
+            foreach (var file in Model.UploadedFiles)
+            {
+                <a href="@file" target="_blank">Xem file</a><br />
+            }
         }
         else
         {

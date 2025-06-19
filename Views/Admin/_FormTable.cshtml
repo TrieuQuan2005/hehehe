@@ -22,9 +22,12 @@
             <td>@form.HoTen</td>
             <td>@form.NgaySinh.ToString("dd/MM/yyyy")</td>
             <td>
-                @if (!string.IsNullOrEmpty(form.UploadedFilePath))
+                @if (form.UploadedFiles != null && form.UploadedFiles.Any())
                 {
-                    <a href="@form.UploadedFilePath" target="_blank">Xem</a>
+                    foreach (var file in form.UploadedFiles)
+                    {
+                        <a href="@file" target="_blank">Xem</a><br />
+                    }
                 }
                 else
                 {
@@ -44,3 +47,4 @@
     }
     </tbody>
 </table>
+//Sua lai file nay cho khop voi database

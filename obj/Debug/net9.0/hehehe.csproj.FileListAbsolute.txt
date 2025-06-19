@@ -80,8 +80,6 @@ C:\Users\Trieu\hehehe\obj\Debug\net9.0\compressed\x98xij22tp-2z0ns9nrw6.gz
 C:\Users\Trieu\hehehe\obj\Debug\net9.0\compressed\cwofebmu02-muycvpuwrr.gz
 C:\Users\Trieu\hehehe\obj\Debug\net9.0\compressed\pyw1v4s0ul-87fc7y1x7t.gz
 C:\Users\Trieu\hehehe\obj\Debug\net9.0\compressed\fs23taftkm-mlv21k5csn.gz
-C:\Users\Trieu\hehehe\obj\Debug\net9.0\compressed\hj54f8x0dr-0spt6yk89j.gz
-C:\Users\Trieu\hehehe\obj\Debug\net9.0\compressed\qf0khtobqt-0spt6yk89j.gz
 C:\Users\Trieu\hehehe\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\Trieu\hehehe\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\Trieu\hehehe\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -230,3 +228,5 @@ C:\Users\Trieu\hehehe\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.C
 C:\Users\Trieu\hehehe\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Trieu\hehehe\obj\Debug\net9.0\hehehe.csproj.AssemblyReference.cache
 C:\Users\Trieu\hehehe\obj\Debug\net9.0\hehehe.csproj.Up2Date
+C:\Users\Trieu\hehehe\obj\Debug\net9.0\compressed\hj54f8x0dr-mwwvnplldc.gz
+C:\Users\Trieu\hehehe\obj\Debug\net9.0\compressed\qf0khtobqt-mwwvnplldc.gz
