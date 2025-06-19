@@ -1,50 +1,67 @@
 ﻿@model Tuple<string, List<hehehe.Models.UserForm>>
 
-<h3>@Model.Item1</h3>
+<h3 style="margin-top: 30px; color: #2c3e50;">@Model.Item1</h3>
 
-<table border="1" cellpadding="6">
-    <thead>
-    <tr>
-        <th>Mã nhập học</th>
-        <th>Họ tên</th>
-        <th>Ngày sinh</th>
-        <th>Điểm thi</th>
-        <th>File</th>
-        <th>Trạng thái</th>
-        <th>Thao tác</th>
-    </tr>
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-family: Arial, sans-serif;">
+    <thead style="background-color: #e8eaf6;">
+        <tr style="border-bottom: 2px solid #ccc;">
+            <th style="padding: 10px;">Mã nhập học</th>
+            <th style="padding: 10px;">Họ tên</th>
+            <th style="padding: 10px;">Ngày sinh</th>
+            <th style="padding: 10px;">Giới tính</th>
+            <th style="padding: 10px;">SĐT</th>
+            <th style="padding: 10px;">Email</th>
+            <th style="padding: 10px;">Ngành</th>
+            <th style="padding: 10px;">File</th>
+            <th style="padding: 10px;">Trạng thái</th>
+            <th style="padding: 10px;">Thao tác</th>
+        </tr>
     </thead>
     <tbody>
-    @foreach (var form in Model.Item2)
-    {
-        <tr>
-            <td>@form.MaNhapHoc</td>
-            <td>@form.HoTen</td>
-            <td>@form.NgaySinh.ToString("dd/MM/yyyy")</td>
-            <td>
-                @if (form.UploadedFiles != null && form.UploadedFiles.Any())
-                {
-                    foreach (var file in form.UploadedFiles)
-                    {
-                        <a href="@file" target="_blank">Xem</a><br />
-                    }
-                }
-                else
-                {
-                    <em>Chưa có</em>
-                }
-            </td>
-            <td>@(form.IsLocked ? "🔒 Đã khóa" : "🔓 Mở")</td>
-            <td>
-                <form method="post" asp-action="ToggleLock" asp-controller="Admin">
-                    <input type="hidden" name="id" value="@form.MaNhapHoc" />
-                    <button type="submit">
-                        @(form.IsLocked ? "Mở khóa" : "Khóa")
-                    </button>
-                </form>
-            </td>
-        </tr>
-    }
+        @if (Model.Item2 != null && Model.Item2.Any())
+        {
+            foreach (var form in Model.Item2)
+            {
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 8px; text-align: center;">@form.MaNhapHoc</td>
+                    <td style="padding: 8px;">@form.HoTen</td>
+                    <td style="padding: 8px;">@form.NgaySinh.ToString("dd/MM/yyyy")</td>
+                    <td style="padding: 8px; text-align: center;">@form.GioiTinh</td>
+                    <td style="padding: 8px;">@form.SoDienThoai</td>
+                    <td style="padding: 8px;">@form.Email</td>
+                    <td style="padding: 8px;">@form.NganhDaoTao</td>
+                    <td style="padding: 8px;">
+                        @if (form.UploadedFiles != null && form.UploadedFiles.Any())
+                        {
+                            foreach (var file in form.UploadedFiles)
+                            {
+                                <a href="@file" target="_blank">📄 Xem</a><br />
+                            }
+                        }
+                        else
+                        {
+                            <em>Chưa có</em>
+                        }
+                    </td>
+                    <td style="padding: 8px; text-align: center;">
+                        @(form.IsLocked ? "🔒 Đã khóa" : "🔓 Mở")
+                    </td>
+                    <td style="padding: 8px; text-align: center;">
+                        <form method="post" asp-action="ToggleLock" asp-controller="Admin">
+                            <input type="hidden" name="id" value="@form.MaNhapHoc" />
+                            <button type="submit" style="padding: 5px 10px; background-color: #007bff; border: none; color: white; border-radius: 4px;">
+                                @(form.IsLocked ? "Mở khóa" : "Khóa")
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="10" style="padding: 12px; text-align: center; color: #888;"><em>Không có sinh viên nào.</em></td>
+            </tr>
+        }
     </tbody>
 </table>
-//Sua lai file nay cho khop voi database

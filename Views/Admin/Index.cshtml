@@ -1,13 +1,38 @@
 ﻿@{
+    ViewData["Title"] = "Trang quản trị";
+
     var atForms = ViewBag.AT as List<hehehe.Models.UserForm>;
     var ctForms = ViewBag.CT as List<hehehe.Models.UserForm>;
     var dtForms = ViewBag.DT as List<hehehe.Models.UserForm>;
+
+    var stats = ViewBag.Stats;
+    int totalUsers = stats?.TotalUsers ?? 0;
+    int totalForms = stats?.FilledCount ?? 0;
+
+    int atCount = stats?.AT?.Count ?? 0;
+    int ctCount = stats?.CT?.Count ?? 0;
+    int dtCount = stats?.DT?.Count ?? 0;
+
+    int atPercent = stats?.AT?.Percent ?? 0;
+    int ctPercent = stats?.CT?.Percent ?? 0;
+    int dtPercent = stats?.DT?.Percent ?? 0;
 }
 
-<h2>Quản lý form sinh viên</h2>
+<h2>📋 Quản lý thông tin sinh viên</h2>
 
-@await Html.PartialAsync("_FormTable", Tuple.Create("📚 An toàn thông tin (AT)", atForms))
+<div style="margin-bottom: 20px; padding: 15px; background-color: #f1f3f5; border: 1px solid #ccc; border-radius: 8px;">
+    <h4>📊 <strong>Thống kê</strong></h4>
+    <ul style="line-height: 1.8;">
+        <li><strong>Tổng tài khoản (không tính admin):</strong> @totalUsers</li>
+        <li><strong>Đã nhập form:</strong> @totalForms sinh viên</li>
+        <li><strong>An toàn thông tin:</strong> @atCount (@atPercent%)</li>
+        <li><strong>Công nghệ thông tin:</strong> @ctCount (@ctPercent%)</li>
+        <li><strong>Điện tử vi mạch:</strong> @dtCount (@dtPercent%)</li>
+    </ul>
+</div>
+
+@await Html.PartialAsync("_FormTable", Tuple.Create("🔐 An toàn thông tin (AT)", atForms))
 <br />
 @await Html.PartialAsync("_FormTable", Tuple.Create("💻 Công nghệ thông tin (CT)", ctForms))
 <br />
-@await Html.PartialAsync("_FormTable", Tuple.Create("🔧 Điện tử vi mạch (DT)", dtForms))
+@await Html.PartialAsync("_FormTable", Tuple.Create("📡 Điện tử vi mạch (DT)", dtForms))

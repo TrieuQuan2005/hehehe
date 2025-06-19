@@ -33,7 +33,7 @@ namespace hehehe.Controllers
             if (existing != null)
             {
                 if (existing.IsLocked)
-                    return View("Locked");
+                    return View("Locked", existing);
                 return View(existing);
             }
 
@@ -49,7 +49,8 @@ namespace hehehe.Controllers
             
             var existing = _db.StudentForms.FirstOrDefault(x => x.MaNhapHoc == ma);
             if (existing != null && existing.IsLocked)
-                return View("Locked");
+                return View("Locked", existing);
+
 
             var savedFilePaths = new List<string>();
 
