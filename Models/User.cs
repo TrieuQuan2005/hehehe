@@ -13,6 +13,6 @@ namespace hehehe.Models
 
         public bool IsAdmin { get; set; } = false;
 
-        public UserForm? Form { get; set; }
+        public UserForm? UserForm { get; set; }
     }
 }

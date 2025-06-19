@@ -28,7 +28,6 @@ namespace hehehe.Controllers
 
             if (user != null)
             {
-                // Lưu thông tin vào session (dùng MaNhapHoc thay vì Id)
                 HttpContext.Session.SetString("MaNhapHoc", user.MaNhapHoc);
                 HttpContext.Session.SetString("IsAdmin", user.IsAdmin.ToString());
 

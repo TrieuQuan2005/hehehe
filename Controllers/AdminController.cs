@@ -31,7 +31,6 @@ namespace hehehe.Controllers
                 .Include(f => f.User)
                 .ToList();
 
-            // Tách theo prefix
             var formsAT = allForms.Where(f => f.MaNhapHoc.StartsWith("AT", StringComparison.OrdinalIgnoreCase)).ToList();
             var formsCT = allForms.Where(f => f.MaNhapHoc.StartsWith("CT", StringComparison.OrdinalIgnoreCase)).ToList();
             var formsDT = allForms.Where(f => f.MaNhapHoc.StartsWith("DT", StringComparison.OrdinalIgnoreCase)).ToList();
@@ -45,7 +44,7 @@ namespace hehehe.Controllers
 
 
         [HttpPost]
-        public IActionResult ToggleLock(string id) // id = MaNhapHoc
+        public IActionResult ToggleLock(string id) 
         {
             if (!IsAdmin()) return Unauthorized();
 

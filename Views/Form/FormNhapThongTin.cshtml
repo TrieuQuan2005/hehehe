@@ -1,40 +1,279 @@
 ﻿@model hehehe.Models.UserForm
 
 @{
-    ViewData["Title"] = "Form nhập thông tin";
+    ViewData["Title"] = "Nhập thông tin sinh viên";
 }
 
-<h2>Form nhập thông tin ngành: @ViewBag.Department</h2>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
-<form asp-action="FormNhapThongTin" method="post" enctype="multipart/form-data">
-    <div>
-        <label for="HoTen">Họ và tên:</label>
-        <input type="text" name="HoTen" value="@Model?.HoTen" required />
-    </div>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to bottom, #e74c3c, #f9ebea);
+        padding: 0;
+        margin: 0;
+    }
 
-    <div>
-        <label for="NgaySinh">Ngày sinh:</label>
-        <input type="date" name="NgaySinh" value="@Model?.NgaySinh.ToString("yyyy-MM-dd")" required />
-    </div>
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: #e74c3c;
+        color: white;
+    }
 
-    <div>
-        <label for="DiemThi">Điểm thi:</label>
-        <input type="number" step="0.01" name="DiemThi" value="@Model?.DiemThi" required />
-    </div>
+    .header img.logo {
+        height: 90px;
+        margin-right: 20px;
+    }
 
-    <div>
-        <label for="uploadedFile">Upload file (PDF/PNG):</label>
-        <input type="file" name="uploadedFile" accept=".pdf,.png" />
-        @if (!string.IsNullOrEmpty(Model?.UploadedFilePath))
-        {
-            <p>File đã upload: <a href="@Model.UploadedFilePath" target="_blank">Xem file</a></p>
+    .header img.text {
+        height: 45px;
+    }
+
+    .form-container {
+        max-width: 900px;
+        background: white;
+        margin: 30px auto;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group-row {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+
+    .section-title {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-top: 30px;
+    }
+
+    .upload-preview {
+        margin-top: 10px;
+        max-height: 180px;
+    }
+
+    .note {
+        font-style: italic;
+        font-size: 0.9em;
+        margin-top: 30px;
+    }
+</style>
+
+<div class="header">
+    <img src="~/images/logo.png" class="logo" />
+    <img src="~/images/text.png" class="text" />
+</div>
+
+<div class="form-container">
+    <form asp-action="FormNhapThongTin" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label>Họ và tên:</label>
+            <input type="text" name="HoTen" value="@Model?.HoTen" required />
+        </div>
+
+        <div class="form-group-row">
+            <div class="form-group">
+                <label>Ngày sinh:</label>
+                <input type="date" name="NgaySinh" value="@(Model?.NgaySinh.ToString("yyyy-MM-dd"))" required />
+            </div>
+            <div class="form-group">
+                <label>Giới tính:</label>
+                <select name="GioiTinh">
+                    <option value="Nam" @(Model?.GioiTinh == "Nam" ? "selected" : "")>Nam</option>
+                    <option value="Nữ" @(Model?.GioiTinh == "Nữ" ? "selected" : "")>Nữ</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group-row">
+            <div class="form-group">
+                <label>Nơi sinh:</label>
+                <input type="text" name="NoiSinh" value="@Model?.NoiSinh" required />
+            </div>
+            <div class="form-group">
+                <label>Dân tộc:</label>
+                <input type="text" name="DanToc" value="@Model?.DanToc" required />
+            </div>
+        </div>
+
+        <div class="form-group-row">
+            <div class="form-group">
+                <label>Đối tượng ưu tiên:</label>
+                <select name="DoiTuongUuTien">
+                    <option value="true" @(Model?.DoiTuongUuTien == true ? "selected" : "")>Có</option>
+                    <option value="false" @(Model?.DoiTuongUuTien == false ? "selected" : "")>Không</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Khu vực:</label>
+                <input type="text" name="KhuVuc" value="@Model?.KhuVuc" required />
+            </div>
+            <div class="form-group">
+                <label>Năm nhập học:</label>
+                <input type="number" name="NamNhapHoc" value="@Model?.NamNhapHoc" required />
+            </div>
+        </div>
+
+        <div class="form-group-row">
+            <div class="form-group">
+                <label>Năm tốt nghiệp THPT:</label>
+                <input type="number" name="NamTotNghiepTHPT" value="@Model?.NamTotNghiepTHPT" required />
+            </div>
+            <div class="form-group">
+                <label>Năm nhập ngũ:</label>
+                <input type="number" name="NamNhapNgu" value="@Model?.NamNhapNgu" />
+            </div>
+            <div class="form-group">
+                <label>Năm xuất ngũ:</label>
+                <input type="number" name="NamXuatNgu" value="@Model?.NamXuatNgu" />
+            </div>
+        </div>
+
+        <div class="form-group-row">
+            <div class="form-group">
+                <label>Ngày vào Đoàn:</label>
+                <input type="date" name="NgayVaoDoan" value="@(Model?.NgayVaoDoan?.ToString("yyyy-MM-dd") ?? "")" />
+            </div>
+            <div class="form-group">
+                <label>Ngày vào Đảng:</label>
+                <input type="date" name="NgayVaoDang" value="@(Model?.NgayVaoDang?.ToString("yyyy-MM-dd") ?? "")" />
+            </div>
+        </div>
+
+        <div class="form-group-row">
+            <div class="form-group">
+                <label>Số điện thoại:</label>
+                <input type="text" name="SoDienThoai" value="@Model?.SoDienThoai" required />
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="Email" value="@Model?.Email" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Ngành đào tạo:</label>
+            <input type="text" name="NganhDaoTao" value="@Model?.NganhDaoTao" required />
+        </div>
+
+        <div class="section-title">Thông tin gia đình:</div>
+        <div class="form-group-row">
+            <div class="form-group">
+                <label>Họ tên bố:</label>
+                <input type="text" name="HoTenBo" value="@Model?.HoTenBo" />
+            </div>
+            <div class="form-group">
+                <label>Tuổi bố:</label>
+                <input type="number" name="TuoiBo" value="@Model?.TuoiBo" />
+            </div>
+            <div class="form-group">
+                <label>Nghề nghiệp:</label>
+                <input type="text" name="NgheNghiepBo" value="@Model?.NgheNghiepBo" />
+            </div>
+            <div class="form-group">
+                <label>SĐT:</label>
+                <input type="text" name="SoDienThoaiBo" value="@Model?.SoDienThoaiBo" />
+            </div>
+        </div>
+
+        <div class="form-group-row">
+            <div class="form-group">
+                <label>Họ tên mẹ:</label>
+                <input type="text" name="HoTenMe" value="@Model?.HoTenMe" />
+            </div>
+            <div class="form-group">
+                <label>Tuổi mẹ:</label>
+                <input type="number" name="TuoiMe" value="@Model?.TuoiMe" />
+            </div>
+            <div class="form-group">
+                <label>Nghề nghiệp:</label>
+                <input type="text" name="NgheNghiepMe" value="@Model?.NgheNghiepMe" />
+            </div>
+            <div class="form-group">
+                <label>SĐT:</label>
+                <input type="text" name="SoDienThoaiMe" value="@Model?.SoDienThoaiMe" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Khi cần báo tin cho ai:</label>
+            <input type="text" name="BaoTinChoAi" value="@Model?.BaoTinChoAi" />
+        </div>
+
+        <div class="form-group">
+            <label>Địa chỉ liên hệ:</label>
+            <input type="text" name="DiaChiLienHe" value="@Model?.DiaChiLienHe" />
+        </div>
+
+        <div class="form-group">
+            <label>Upload ảnh chân dung:</label>
+            <input type="file" name="avatar" accept="image/*" onchange="previewImage(this)" />
+            <img id="avatarPreview" class="upload-preview" />
+        </div>
+
+        <div class="form-group">
+            <label>Upload file bổ sung (PDF/PNG):</label>
+            <input type="file" name="uploadedFile" accept=".pdf,.png" />
+            @if (!string.IsNullOrEmpty(Model?.UploadedFilePath)) {
+                <p><a href="@Model.UploadedFilePath" target="_blank">Xem file đã upload</a></p>
+            }
+        </div>
+
+        <div class="form-group">
+            <label>Bạn đã kiểm tra kỹ thông tin?</label>
+            <select name="XacNhan" required>
+                <option value="">-- Chọn --</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-danger">Lưu thông tin</button>
+
+        <div class="note">
+            <strong>Ghi chú:</strong><br />
+            - Mã SV, Lớp, Khóa: Không ghi; Họ và tên: Ghi chữ in hoa; Đối tượng ưu tiên: Ghi theo hồ sơ ĐKDT<br />
+            - Chỗ ở hiện nay: Ghi rõ số nhà, tổ/xóm, phường/xã/thị trấn, quận/huyện, tỉnh/TP.<br />
+            - Thí sinh điền đầy đủ thông tin vào Phiếu sinh viên, nộp kèm Hồ sơ khi đến nhập học.
+        </div>
+    </form>
+</div>
+
+<script>
+    function previewImage(input) {
+        const file = input.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById("avatarPreview").src = e.target.result;
+            };
+            reader.readAsDataURL(file);
         }
-    </div>
-
-    <button type="submit">Lưu</button>
-</form>
-
-@if (TempData["Message"] != null)
-{
-    <p style="color:green">@TempData["Message"]</p>
-}
+    }
+</script>

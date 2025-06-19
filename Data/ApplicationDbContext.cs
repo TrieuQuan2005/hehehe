@@ -23,10 +23,9 @@ namespace hehehe.Data
                 .HasKey(f => f.MaNhapHoc);
 
             modelBuilder.Entity<User>()
-                .HasOne(u => u.Form)
+                .HasOne(u => u.UserForm)
                 .WithOne(f => f.User)
                 .HasForeignKey<UserForm>(f => f.MaNhapHoc);
         }
     }
-
 }

@@ -37,16 +37,22 @@ namespace hehehe.Controllers
             if (form?.IsLocked == true)
                 return View("XemThongTin", form);
 
-            return View("FormNhapThongTin", form ?? new UserForm());
+            return View("FormNhapThongTin", form ?? new UserForm { MaNhapHoc = maNhapHoc });
         }
 
         [HttpPost]
-        public async Task<IActionResult> FormNhapThongTin(UserForm model, IFormFile uploadedFile)
+        public async Task<IActionResult> FormNhapThongTin(UserForm model, IFormFile uploadedFile, string XacNhan)
         {
             var maNhapHoc = HttpContext.Session.GetString("MaNhapHoc");
             if (string.IsNullOrEmpty(maNhapHoc))
                 return RedirectToAction("Login", "Auth");
-
+            
+            if (XacNhan != "Yes")
+            {
+                TempData["Message"] = "Vui lòng xác nhận thông tin trước khi lưu.";
+                return RedirectToAction("FormNhapThongTin");
+            }   
+            
             var existing = _db.StudentForms.FirstOrDefault(f => f.MaNhapHoc == maNhapHoc);
             if (existing?.IsLocked == true)
                 return View("Locked");
@@ -57,7 +63,6 @@ namespace hehehe.Controllers
             {
                 var userFolder = Path.Combine("uploads", maNhapHoc);
                 var absoluteFolderPath = Path.Combine(_env.WebRootPath, userFolder);
-
                 Directory.CreateDirectory(absoluteFolderPath);
 
                 var ext = Path.GetExtension(uploadedFile.FileName);
@@ -73,23 +78,43 @@ namespace hehehe.Controllers
 
             if (existing == null)
             {
-                var newForm = new UserForm
-                {
-                    MaNhapHoc = maNhapHoc,
-                    HoTen = model.HoTen,
-                    NgaySinh = model.NgaySinh,
-                    DiemThi = model.DiemThi,
-                    UploadedFilePath = filePath,
-                    IsLocked = false
-                };
-                _db.StudentForms.Add(newForm);
+                model.MaNhapHoc = maNhapHoc;
+                model.UploadedFilePath = filePath;
+                model.IsLocked = false;
+                _db.StudentForms.Add(model);
             }
             else
             {
                 existing.HoTen = model.HoTen;
                 existing.NgaySinh = model.NgaySinh;
-                existing.DiemThi = model.DiemThi;
+                existing.GioiTinh = model.GioiTinh;
+                existing.NoiSinh = model.NoiSinh;
+                existing.DanToc = model.DanToc;
+                existing.NoiThuongTru = model.NoiThuongTru;
+                existing.ChoOHienNay = model.ChoOHienNay;
+                existing.DoiTuongUuTien = model.DoiTuongUuTien;
+                existing.KhuVuc = model.KhuVuc;
+                existing.NamNhapHoc = model.NamNhapHoc;
+                existing.NamTotNghiepTHPT = model.NamTotNghiepTHPT;
+                existing.NamNhapNgu = model.NamNhapNgu;
+                existing.NamXuatNgu = model.NamXuatNgu;
+                existing.NgayVaoDoan = model.NgayVaoDoan;
+                existing.NgayVaoDang = model.NgayVaoDang;
+                existing.NganhDaoTao = model.NganhDaoTao;
+                existing.SoDienThoai = model.SoDienThoai;
+                existing.Email = model.Email;
+                existing.HoTenBo = model.HoTenBo;
+                existing.TuoiBo = model.TuoiBo;
+                existing.NgheNghiepBo = model.NgheNghiepBo;
+                existing.SoDienThoaiBo = model.SoDienThoaiBo;
+                existing.HoTenMe = model.HoTenMe;
+                existing.TuoiMe = model.TuoiMe;
+                existing.NgheNghiepMe = model.NgheNghiepMe;
+                existing.SoDienThoaiMe = model.SoDienThoaiMe;
+                existing.BaoTinChoAi = model.BaoTinChoAi;
+                existing.DiaChiLienHe = model.DiaChiLienHe;
                 existing.UploadedFilePath = filePath;
+
                 _db.StudentForms.Update(existing);
             }
 
