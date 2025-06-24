@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NgFNug3EbsLk4Nwm/dY0AD3JHIkNq3RnNCCfTzKwSdU=",
+  "Hash": "niL7+DOi5KHy8y7+WTjVStGoOJQXqwCFbNIo5i6vll4=",
   "Source": "hehehe",
   "BasePath": "_content/hehehe",
   "Mode": "Default",
@@ -2768,12 +2768,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\admin\\admin_20250614_1910.pdf",
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.pdf",
       "SourceId": "hehehe",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
       "BasePath": "_content/hehehe",
-      "RelativePath": "uploads/admin/admin_20250614_1910#[.{fingerprint}]?.pdf",
+      "RelativePath": "uploads/CT200147/CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14#[.{fingerprint}]?.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2782,11 +2782,263 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "eswkglv0bk",
-      "Integrity": "Aqk5ScaUc4TFv06iAUHPPdUyePegvUNtG8hgpbmjKLo=",
+      "Fingerprint": "nkg4udhci0",
+      "Integrity": "GZHEBcpOXK/4KoHcygeb6ViiNcMsajgFF1Kivi4Ap2o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\admin\\admin_20250614_1910.pdf"
+      "OriginalItemSpec": "wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.pdf",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/CT200147/CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r315s9mrza",
+      "Integrity": "KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.pdf",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/CT200147/CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r3sezmpzkz",
+      "Integrity": "OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.pdf",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/CT200147/CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r315s9mrza",
+      "Integrity": "KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.pdf",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/CT200147/CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r315s9mrza",
+      "Integrity": "KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_avatar.jpg",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/CT200147/CT200147_avatar#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "h5b2kuu92x",
+      "Integrity": "9ZDLojqbr8JAhs0VpPgwN9Tu+Ig4fTSLAZHid5tz8+4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\CT200147\\CT200147_avatar.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.pdf",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/DT200147/DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ji9rhuuvjd",
+      "Integrity": "FQ4llfKKm/Dt7pMH7+pkSiTeRlxnK1S/4JolFtD0AxY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.pdf",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/DT200147/DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r315s9mrza",
+      "Integrity": "KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.pdf",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/DT200147/DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8rh4td8xwt",
+      "Integrity": "5IN3Y6Lzel0g98irZZ+kEaGXx6mw9z8Am97Mcg8cqaQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.pdf",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/DT200147/DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r3sezmpzkz",
+      "Integrity": "OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.pdf",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/DT200147/DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r315s9mrza",
+      "Integrity": "KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.pdf",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/DT200147/DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d7bhrlx5ax",
+      "Integrity": "B+65Hg37cluRU25WjqXjiHKsuY8+6DHXHRHPZ3fPLMQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_avatar.jpg",
+      "SourceId": "hehehe",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trieu\\hehehe\\wwwroot\\",
+      "BasePath": "_content/hehehe",
+      "RelativePath": "uploads/DT200147/DT200147_avatar#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "em4s00bae1",
+      "Integrity": "ZjZajc7RoeoCRVQEray1hijm4Y01RID1pCQQolXsZfA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\DT200147\\DT200147_avatar.jpg"
     }
   ],
   "Endpoints": [
@@ -22109,8 +22361,8 @@
       ]
     },
     {
-      "Route": "uploads/admin/admin_20250614_1910.eswkglv0bk.pdf",
-      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\admin\\admin_20250614_1910.pdf",
+      "Route": "uploads/CT200147/CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.nkg4udhci0.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.pdf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -22119,7 +22371,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4037127"
+          "Value": "146853"
         },
         {
           "Name": "Content-Type",
@@ -22127,11 +22379,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Aqk5ScaUc4TFv06iAUHPPdUyePegvUNtG8hgpbmjKLo=\""
+          "Value": "\"GZHEBcpOXK/4KoHcygeb6ViiNcMsajgFF1Kivi4Ap2o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:10:14 GMT"
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -22141,21 +22393,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "eswkglv0bk"
+          "Value": "nkg4udhci0"
         },
         {
           "Name": "label",
-          "Value": "uploads/admin/admin_20250614_1910.pdf"
+          "Value": "uploads/CT200147/CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.pdf"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Aqk5ScaUc4TFv06iAUHPPdUyePegvUNtG8hgpbmjKLo="
+          "Value": "sha256-GZHEBcpOXK/4KoHcygeb6ViiNcMsajgFF1Kivi4Ap2o="
         }
       ]
     },
     {
-      "Route": "uploads/admin/admin_20250614_1910.pdf",
-      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\admin\\admin_20250614_1910.pdf",
+      "Route": "uploads/CT200147/CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.pdf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -22164,7 +22416,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4037127"
+          "Value": "146853"
         },
         {
           "Name": "Content-Type",
@@ -22172,11 +22424,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Aqk5ScaUc4TFv06iAUHPPdUyePegvUNtG8hgpbmjKLo=\""
+          "Value": "\"GZHEBcpOXK/4KoHcygeb6ViiNcMsajgFF1Kivi4Ap2o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:10:14 GMT"
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -22186,7 +22438,991 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Aqk5ScaUc4TFv06iAUHPPdUyePegvUNtG8hgpbmjKLo="
+          "Value": "sha256-GZHEBcpOXK/4KoHcygeb6ViiNcMsajgFF1Kivi4Ap2o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/CT200147/CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/CT200147/CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.r315s9mrza.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r315s9mrza"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/CT200147/CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/CT200147/CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "426734"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/CT200147/CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.r3sezmpzkz.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "426734"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r3sezmpzkz"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/CT200147/CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/CT200147/CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/CT200147/CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.r315s9mrza.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r315s9mrza"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/CT200147/CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/CT200147/CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/CT200147/CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.r315s9mrza.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r315s9mrza"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/CT200147/CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/CT200147/CT200147_avatar.h5b2kuu92x.jpg",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_avatar.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15960097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9ZDLojqbr8JAhs0VpPgwN9Tu+Ig4fTSLAZHid5tz8+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h5b2kuu92x"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/CT200147/CT200147_avatar.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9ZDLojqbr8JAhs0VpPgwN9Tu+Ig4fTSLAZHid5tz8+4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/CT200147/CT200147_avatar.jpg",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_avatar.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15960097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9ZDLojqbr8JAhs0VpPgwN9Tu+Ig4fTSLAZHid5tz8+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 06:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9ZDLojqbr8JAhs0VpPgwN9Tu+Ig4fTSLAZHid5tz8+4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.ji9rhuuvjd.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "227947"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FQ4llfKKm/Dt7pMH7+pkSiTeRlxnK1S/4JolFtD0AxY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ji9rhuuvjd"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/DT200147/DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FQ4llfKKm/Dt7pMH7+pkSiTeRlxnK1S/4JolFtD0AxY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "227947"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FQ4llfKKm/Dt7pMH7+pkSiTeRlxnK1S/4JolFtD0AxY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FQ4llfKKm/Dt7pMH7+pkSiTeRlxnK1S/4JolFtD0AxY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.r315s9mrza.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r315s9mrza"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/DT200147/DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.8rh4td8xwt.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "193635"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5IN3Y6Lzel0g98irZZ+kEaGXx6mw9z8Am97Mcg8cqaQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8rh4td8xwt"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/DT200147/DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5IN3Y6Lzel0g98irZZ+kEaGXx6mw9z8Am97Mcg8cqaQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "193635"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5IN3Y6Lzel0g98irZZ+kEaGXx6mw9z8Am97Mcg8cqaQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5IN3Y6Lzel0g98irZZ+kEaGXx6mw9z8Am97Mcg8cqaQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "426734"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.r3sezmpzkz.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "426734"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r3sezmpzkz"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/DT200147/DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.r315s9mrza.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r315s9mrza"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/DT200147/DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.d7bhrlx5ax.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "247079"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B+65Hg37cluRU25WjqXjiHKsuY8+6DHXHRHPZ3fPLMQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d7bhrlx5ax"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/DT200147/DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-B+65Hg37cluRU25WjqXjiHKsuY8+6DHXHRHPZ3fPLMQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.pdf",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "247079"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B+65Hg37cluRU25WjqXjiHKsuY8+6DHXHRHPZ3fPLMQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 00:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-B+65Hg37cluRU25WjqXjiHKsuY8+6DHXHRHPZ3fPLMQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_avatar.em4s00bae1.jpg",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_avatar.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49065"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZjZajc7RoeoCRVQEray1hijm4Y01RID1pCQQolXsZfA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 02:45:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "em4s00bae1"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/DT200147/DT200147_avatar.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZjZajc7RoeoCRVQEray1hijm4Y01RID1pCQQolXsZfA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/DT200147/DT200147_avatar.jpg",
+      "AssetFile": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_avatar.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49065"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZjZajc7RoeoCRVQEray1hijm4Y01RID1pCQQolXsZfA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 24 Jun 2025 02:45:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZjZajc7RoeoCRVQEray1hijm4Y01RID1pCQQolXsZfA="
         }
       ]
     }

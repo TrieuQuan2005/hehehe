@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using hehehe.Data;
+using hehehe.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -24,43 +25,46 @@ namespace hehehe.Controllers
             return user != null && user.IsAdmin;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        [HttpGet]
+        public IActionResult Index(string nganh = "", string maNhapHoc = "")
         {
-            if (!IsAdmin()) return Unauthorized();
-
-            // Lấy danh sách form đã nhập
             var allForms = _db.StudentForms
-                .Include(f => f.User)
+                .Where(f => f.MaNhapHoc != "admin")
                 .ToList();
 
-            // Tách theo ngành dựa vào Mã nhập học
-            var formsAT = allForms.Where(f => f.MaNhapHoc.StartsWith("AT", System.StringComparison.OrdinalIgnoreCase)).ToList();
-            var formsCT = allForms.Where(f => f.MaNhapHoc.StartsWith("CT", System.StringComparison.OrdinalIgnoreCase)).ToList();
-            var formsDT = allForms.Where(f => f.MaNhapHoc.StartsWith("DT", System.StringComparison.OrdinalIgnoreCase)).ToList();
+            var totalUsers = _db.Users.Count() -1;
+            var filledCount = allForms.Count;
 
-            // Lấy tổng số tài khoản không phải admin
-            int totalAccounts = _db.Users.Count(u => !u.IsAdmin);
-            int atCount = formsAT.Count;
-            int ctCount = formsCT.Count;
-            int dtCount = formsDT.Count;
+            var atList = allForms.Where(f => f.NganhDaoTao == "An toàn thông tin").ToList();
+            var ctList = allForms.Where(f => f.NganhDaoTao == "Công nghệ thông tin").ToList();
+            var dtList = allForms.Where(f => f.NganhDaoTao == "Điện tử vi mạch").ToList();
 
-            // Truyền dữ liệu sang view
-            ViewBag.AT = formsAT;
-            ViewBag.CT = formsCT;
-            ViewBag.DT = formsDT;
-
-            ViewBag.Stats = new
+            var stats = new
             {
-                TotalUsers = totalAccounts,
-                FilledCount = atCount + ctCount + dtCount,
-                AT = new { Count = atCount, Percent = totalAccounts > 0 ? (int)((double)atCount * 100 / totalAccounts) : 0 },
-                CT = new { Count = ctCount, Percent = totalAccounts > 0 ? (int)((double)ctCount * 100 / totalAccounts) : 0 },
-                DT = new { Count = dtCount, Percent = totalAccounts > 0 ? (int)((double)dtCount * 100 / totalAccounts) : 0 }
+                TotalUsers = totalUsers,
+                FilledCount = filledCount,
+                AT = new { Count = atList.Count, Percent = atList.Count * 100 / Math.Max(1, filledCount) },
+                CT = new { Count = ctList.Count, Percent = ctList.Count * 100 / Math.Max(1, filledCount) },
+                DT = new { Count = dtList.Count, Percent = dtList.Count * 100 / Math.Max(1, filledCount) }
             };
+
+            ViewBag.Stats = stats;
+
+            if (!string.IsNullOrEmpty(nganh))
+                allForms = allForms.Where(f => f.NganhDaoTao == nganh).ToList();
+
+            if (!string.IsNullOrEmpty(maNhapHoc))
+                allForms = allForms.Where(f => f.MaNhapHoc.Contains(maNhapHoc)).ToList();
+
+            ViewBag.NganhFilter = nganh;
+            ViewBag.MaNhapHocFilter = maNhapHoc;
+            ViewBag.List = allForms;
 
             return View();
         }
 
+        
         [HttpPost]
         public IActionResult ToggleLock(string id)
         {

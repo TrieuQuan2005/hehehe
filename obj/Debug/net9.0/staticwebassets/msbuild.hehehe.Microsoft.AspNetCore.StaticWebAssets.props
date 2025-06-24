@@ -1188,23 +1188,239 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\admin\admin_20250614_1910.pdf'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.pdf'))">
       <SourceType>Package</SourceType>
       <SourceId>hehehe</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/hehehe</BasePath>
-      <RelativePath>uploads/admin/admin_20250614_1910.pdf</RelativePath>
+      <RelativePath>uploads/CT200147/CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.pdf</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>eswkglv0bk</Fingerprint>
-      <Integrity>Aqk5ScaUc4TFv06iAUHPPdUyePegvUNtG8hgpbmjKLo=</Integrity>
+      <Fingerprint>nkg4udhci0</Fingerprint>
+      <Integrity>GZHEBcpOXK/4KoHcygeb6ViiNcMsajgFF1Kivi4Ap2o=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\admin\admin_20250614_1910.pdf'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/CT200147/CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r315s9mrza</Fingerprint>
+      <Integrity>KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/CT200147/CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r3sezmpzkz</Fingerprint>
+      <Integrity>OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/CT200147/CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r315s9mrza</Fingerprint>
+      <Integrity>KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/CT200147/CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r315s9mrza</Fingerprint>
+      <Integrity>KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_avatar.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/CT200147/CT200147_avatar.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>h5b2kuu92x</Fingerprint>
+      <Integrity>9ZDLojqbr8JAhs0VpPgwN9Tu+Ig4fTSLAZHid5tz8+4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_avatar.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/DT200147/DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ji9rhuuvjd</Fingerprint>
+      <Integrity>FQ4llfKKm/Dt7pMH7+pkSiTeRlxnK1S/4JolFtD0AxY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/DT200147/DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r315s9mrza</Fingerprint>
+      <Integrity>KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/DT200147/DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8rh4td8xwt</Fingerprint>
+      <Integrity>5IN3Y6Lzel0g98irZZ+kEaGXx6mw9z8Am97Mcg8cqaQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/DT200147/DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r3sezmpzkz</Fingerprint>
+      <Integrity>OQ//t9T39BLGTPLJSrFN6O5SMLphAXlh0juCnMKgpmg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/DT200147/DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r315s9mrza</Fingerprint>
+      <Integrity>KeuXhDF+kSTuQBa2YhN5V10tnpy+NpovAbOuif//fVk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/DT200147/DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>d7bhrlx5ax</Fingerprint>
+      <Integrity>B+65Hg37cluRU25WjqXjiHKsuY8+6DHXHRHPZ3fPLMQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_avatar.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/DT200147/DT200147_avatar.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>em4s00bae1</Fingerprint>
+      <Integrity>ZjZajc7RoeoCRVQEray1hijm4Y01RID1pCQQolXsZfA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_avatar.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

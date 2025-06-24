@@ -1,9 +1,10 @@
-﻿@model hehehe.Models.UserForm
-
+﻿
+@model hehehe.Models.UserForm
 @{
     ViewData["Title"] = "Nhập thông tin sinh viên";
     Layout = null;
 }
+@using System.IO
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
@@ -78,15 +79,13 @@
         max-height: 180px;
         height: 100px;
         width: 80px;
+        object-fit: cover;
+        border-radius: 6px;
+        border: 1px solid #aaa;
     }
 
-    .note {
-        font-style: italic;
-        font-size: 0.9em;
-        margin-top: 30px;
-    }
     .submit-button {
-        background-color: #3498db; 
+        background-color: #3498db;
         color: white;
         padding: 12px 20px;
         border: 2px solid #2980b9;
@@ -102,6 +101,35 @@
         border-color: #1f6393;
     }
 
+    .note {
+        font-style: italic;
+        font-size: 0.9em;
+        margin-top: 30px;
+    }
+    .btn-add-file,
+    .btn-remove-file {
+        margin-top: 10px;
+        margin-right: 10px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .btn-remove-file {
+        background-color: #e74c3c;
+    }
+
+    .btn-add-file:hover {
+        background-color: #2980b9;
+    }
+
+    .btn-remove-file:hover {
+        background-color: #c0392b;
+    }
 </style>
 
 <div class="header">
@@ -114,19 +142,30 @@
 
         <div class="form-group">
             <label>Upload ảnh chân dung:</label>
-            <input type="file" name="avatar" accept="image/*" onchange="previewImage(this)" required />
-            <img id="avatarPreview" class="upload-preview" />
+            <input type="file" name="avatar" accept="image/*" onchange="previewImage(this)" />
+            @{
+                var avatarPath = Model?.UploadedFiles?.FirstOrDefault(f =>
+                    f.EndsWith(".jpg") || f.EndsWith(".jpeg") || f.EndsWith(".png"));
+            }
+            @if (!string.IsNullOrEmpty(avatarPath))
+            {
+                <img id="avatarPreview" class="upload-preview" src="@avatarPath" />
+            }
+            else
+            {
+                <img id="avatarPreview" class="upload-preview" style="display:none" />
+            }
         </div>
 
         <div class="form-group">
             <label>Họ và tên:</label>
-            <input type="text" placeholder="Nhập họ và tên đầy đủ" name="HoTen" value="@Model?.HoTen" required />
+            <input type="text" name="HoTen" value="@Model?.HoTen" required />
         </div>
 
         <div class="form-group-row">
             <div class="form-group">
                 <label>Ngày sinh:</label>
-                <input type="text" name="NgaySinh" placeholder="VD: 28/03/2007" value="@(Model?.NgaySinh.ToString("dd/MM/yyyy"))" required />
+                <input type="text" name="NgaySinh" value="@(Model?.NgaySinh.ToString("dd/MM/yyyy"))" required />
             </div>
             <div class="form-group">
                 <label>Giới tính:</label>
@@ -142,21 +181,22 @@
                 <label>Nơi sinh:</label>
                 <input type="text" name="NoiSinh" value="@Model?.NoiSinh" required />
             </div>
-            
             <div class="form-group">
                 <label>Dân tộc:</label>
                 <input type="text" name="DanToc" value="@Model?.DanToc" required />
             </div>
         </div>
+
         <div class="form-group">
             <label>Nơi thường trú:</label>
             <input type="text" name="NoiThuongTru" value="@Model?.NoiThuongTru" required />
         </div>
+
         <div class="form-group">
             <label>Nơi ở hiện nay:</label>
             <input type="text" name="ChoOHienNay" value="@Model?.ChoOHienNay" required />
         </div>
-        
+
         <div class="form-group-row">
             <div class="form-group">
                 <label>Đối tượng ưu tiên:</label>
@@ -193,11 +233,11 @@
         <div class="form-group-row">
             <div class="form-group">
                 <label>Ngày vào Đoàn:</label>
-                <input type="text" name="NgayVaoDoan" placeholder="VD: 26/03/2023" value="@(Model?.NgayVaoDoan?.ToString("dd/MM/yyyy") ?? "")" required />
+                <input type="text" name="NgayVaoDoan" value="@(Model?.NgayVaoDoan?.ToString("dd/MM/yyyy") ?? "")" required />
             </div>
             <div class="form-group">
                 <label>Ngày vào Đảng:</label>
-                <input type="text" name="NgayVaoDang" placeholder="VD: 25/08/2025" value="@(Model?.NgayVaoDang?.ToString("dd/MM/yyyy") ?? "")" />
+                <input type="text" name="NgayVaoDang" value="@(Model?.NgayVaoDang?.ToString("dd/MM/yyyy") ?? "")" />
             </div>
         </div>
 
@@ -215,10 +255,10 @@
         <div class="form-group">
             <label>Ngành đào tạo:</label>
             <select name="NganhDaoTao">
-                <option value = "An toàn thông tin" selected="@(Model?.NganhDaoTao == "An toàn thông tin")">An toàn thông tin</option>
-                <option value = "Công nghệ thông tin" selected="@(Model?.NganhDaoTao == "Công nghệ thông tin")">Công nghệ thông tin</option>
-                <option value = "Điện tử vi mạch" selected="@(Model?.NganhDaoTao == "Điện tử vi mạch")">Điện tử vi mạch</option>
-                </select>
+                <option value="An toàn thông tin" selected="@(Model?.NganhDaoTao == "An toàn thông tin")">An toàn thông tin</option>
+                <option value="Công nghệ thông tin" selected="@(Model?.NganhDaoTao == "Công nghệ thông tin")">Công nghệ thông tin</option>
+                <option value="Điện tử vi mạch" selected="@(Model?.NganhDaoTao == "Điện tử vi mạch")">Điện tử vi mạch</option>
+            </select>
         </div>
 
         <div class="section-title">Thông tin gia đình:</div>
@@ -272,15 +312,29 @@
 
         <div class="form-group">
             <label>Upload file bổ sung (PDF/PNG):</label>
-            <input type="file" name="uploadedFiles" multiple />
-            @foreach (var file in Model.UploadedFiles)
+            <div id="fileUploadContainer">
+                <input type="file" name="uploadedFiles" multiple/>
+            </div>
+    
+            <button type="button" class="btn-add-file" onclick="addFileInput()">➕ Thêm file</button>
+
+            @for (int i = 0; i < Model.UploadedFiles?.Count; i++)
             {
-                <p><a href="@file" target="_blank">Xem file</a></p>
+                var filePath = Model.UploadedFiles[i];
+                var fileName = !string.IsNullOrEmpty(filePath) ? System.IO.Path.GetFileName(filePath) : "Tên file không xác định";
+                
+                <div id="uploaded-file-@i">
+                    <a href="@filePath" target="_blank">@fileName</a>
+                    <button type="button" onclick="removeFile(@i)">❌</button>
+                    <input type="hidden" name="UploadedFiles[@i]" value="@filePath" />
+                </div>
+                
+                <input type="hidden" name="UploadedFiles[@i]" value="@filePath" />
             }
         </div>
-
+        
         <div>
-            * Chú ý: Hãy kiểm tra thật kỹ thông tin trước khi xác nhận <br/>
+            * Chú ý: Hãy kiểm tra thật kỹ thông tin trước khi xác nhận <br />
         </div>
 
         <button type="submit" class="submit-button">Lưu thông tin</button>
@@ -300,9 +354,30 @@
         if (file) {
             const reader = new FileReader();
             reader.onload = function (e) {
-                document.getElementById("avatarPreview").src = e.target.result;
+                const preview = document.getElementById("avatarPreview");
+                preview.src = e.target.result;
+                preview.style.display = "block";
             };
             reader.readAsDataURL(file);
         }
     }
 </script>
+<script>
+    function addFileInput() {
+    const container = document.getElementById("fileUploadContainer");
+    const newInput = document.createElement("input");
+    newInput.type = "file";
+    newInput.name = "uploadedFiles";
+    newInput.accept = ".pdf,.png";
+    newInput.style.marginTop = "10px";
+    container.appendChild(newInput);
+    }
+
+
+    function removeFile(index) {
+    const container = document.getElementById("uploaded-file-" + index);
+    if (container) container.remove();
+
+}
+</script>
+

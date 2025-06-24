@@ -1,10 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Trang quản trị";
 
-    var atForms = ViewBag.AT as List<hehehe.Models.UserForm>;
-    var ctForms = ViewBag.CT as List<hehehe.Models.UserForm>;
-    var dtForms = ViewBag.DT as List<hehehe.Models.UserForm>;
-
     var stats = ViewBag.Stats;
     int totalUsers = stats?.TotalUsers ?? 0;
     int totalForms = stats?.FilledCount ?? 0;
@@ -16,14 +12,17 @@
     int atPercent = stats?.AT?.Percent ?? 0;
     int ctPercent = stats?.CT?.Percent ?? 0;
     int dtPercent = stats?.DT?.Percent ?? 0;
-}
 
+    var list = ViewBag.List as List<hehehe.Models.UserForm>;
+    var nganh = ViewBag.NganhFilter as string ?? "";
+    var maNhapHoc = ViewBag.MaNhapHocFilter as string ?? "";
+}
 <h2>📋 Quản lý thông tin sinh viên</h2>
 
 <div style="margin-bottom: 20px; padding: 15px; background-color: #f1f3f5; border: 1px solid #ccc; border-radius: 8px;">
     <h4>📊 <strong>Thống kê</strong></h4>
     <ul style="line-height: 1.8;">
-        <li><strong>Tổng tài khoản (không tính admin):</strong> @totalUsers</li>
+        <li><strong>Tổng tài khoản :</strong> @totalUsers</li>
         <li><strong>Đã nhập form:</strong> @totalForms sinh viên</li>
         <li><strong>An toàn thông tin:</strong> @atCount (@atPercent%)</li>
         <li><strong>Công nghệ thông tin:</strong> @ctCount (@ctPercent%)</li>
@@ -31,8 +30,61 @@
     </ul>
 </div>
 
-@await Html.PartialAsync("_FormTable", Tuple.Create("🔐 An toàn thông tin (AT)", atForms))
-<br />
-@await Html.PartialAsync("_FormTable", Tuple.Create("💻 Công nghệ thông tin (CT)", ctForms))
-<br />
-@await Html.PartialAsync("_FormTable", Tuple.Create("📡 Điện tử vi mạch (DT)", dtForms))
+<!-- Form bộ lọc -->
+<form method="get" style="margin-bottom: 20px;">
+    <select name="nganh" style="padding: 6px;">
+        <option value="">-- Tất cả ngành --</option>
+        <option value="An toàn thông tin" selected="@(nganh == "An toàn thông tin")">An toàn thông tin</option>
+        <option value="Công nghệ thông tin" selected="@(nganh == "Công nghệ thông tin")">Công nghệ thông tin</option>
+        <option value="Điện tử vi mạch" selected="@(nganh == "Điện tử vi mạch")">Điện tử vi mạch</option>
+    </select>
+
+    <input type="text" name="maNhapHoc" placeholder="Tìm theo mã nhập học" value="@maNhapHoc" style="padding: 6px; width: 200px; margin-left: 10px;" />
+
+    <button type="submit" style="padding: 6px 12px; margin-left: 10px;">🔍 Lọc</button>
+</form>
+
+<!-- Bảng danh sách sinh viên -->
+<table style="width: 100%; border-collapse: collapse;">
+    <thead style="background-color: #f2f2f2;">
+        <tr>
+            <th style="padding: 8px;">Mã nhập học</th>
+            <th style="padding: 8px;">Họ tên</th>
+            <th style="padding: 8px;">Ngày sinh</th>
+            <th style="padding: 8px;">Ngành</th>
+            <th style="padding: 8px;">Email</th>
+            <th style="padding: 8px;">Trạng thái</th>
+            <th style="padding: 8px;">Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (list != null && list.Any())
+        {
+            foreach (var form in list)
+            {
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 8px;">@form.MaNhapHoc</td>
+                    <td style="padding: 8px;">@form.HoTen</td>
+                    <td style="padding: 8px;">@form.NgaySinh.ToString("dd/MM/yyyy")</td>
+                    <td style="padding: 8px;">@form.NganhDaoTao</td>
+                    <td style="padding: 8px;">@form.Email</td>
+                    <td style="padding: 8px; text-align: center;">@(form.IsLocked ? "🔒" : "🔓")</td>
+                    <td style="padding: 8px; text-align: center;">
+                        <form method="post" asp-action="ToggleLock" asp-controller="Admin">
+                            <input type="hidden" name="id" value="@form.MaNhapHoc" />
+                            <button type="submit" style="padding: 5px 10px; background-color: #3498db; color: white; border: none; border-radius: 4px;">
+                                @(form.IsLocked ? "Mở khóa" : "Khóa")
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7" style="text-align:center; padding: 15px;">Không có sinh viên nào.</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -41,25 +41,36 @@ namespace hehehe.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> FormNhapThongTin(UserForm model, List<IFormFile> uploadedFiles)
+        public async Task<IActionResult> FormNhapThongTin(UserForm model, List<IFormFile> uploadedFiles, IFormFile avatar)
         {
             var ma = HttpContext.Session.GetString("MaNhapHoc");
             if (string.IsNullOrEmpty(ma))
                 return RedirectToAction("Login", "Auth");
-            
+
             var existing = _db.StudentForms.FirstOrDefault(x => x.MaNhapHoc == ma);
             if (existing != null && existing.IsLocked)
                 return View("Locked", existing);
 
-
             var savedFilePaths = new List<string>();
+            var userFolder = Path.Combine("uploads", ma);
+            var absolutePath = Path.Combine(_env.WebRootPath, userFolder);
+            Directory.CreateDirectory(absolutePath);
+
+            if (avatar != null && avatar.Length > 0)
+            {
+                var ext = Path.GetExtension(avatar.FileName);
+                var avatarFileName = $"{ma}_avatar{ext}";
+                var fullPath = Path.Combine(absolutePath, avatarFileName);
+
+                using var stream = new FileStream(fullPath, FileMode.Create);
+                await avatar.CopyToAsync(stream);
+
+                var relativePath = $"/{userFolder.Replace("\\", "/")}/{avatarFileName}";
+                savedFilePaths.Add(relativePath);
+            }
 
             if (uploadedFiles != null && uploadedFiles.Count > 0)
             {
-                var userFolder = Path.Combine("uploads", ma);
-                var absolutePath = Path.Combine(_env.WebRootPath, userFolder);
-                Directory.CreateDirectory(absolutePath);
-
                 foreach (var file in uploadedFiles)
                 {
                     if (file.Length > 0)
@@ -98,7 +109,8 @@ namespace hehehe.Controllers
 
             await _db.SaveChangesAsync();
             TempData["Message"] = "Lưu thành công!";
-            return RedirectToAction("FormNhapThongTin");
+            return View("Success", existing ?? model);
         }
+
     }
 }

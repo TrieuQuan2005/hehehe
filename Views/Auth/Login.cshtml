@@ -11,7 +11,6 @@
         background: linear-gradient(to bottom, #e74c3c, #f9ebea);
         margin: 0;
         padding: 0;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -120,17 +119,21 @@
     <h2>Đăng nhập</h2>
 
     @if (ViewBag.Error != null)
-                              {
-    <div class="error">@ViewBag.Error</div>
+    {
+        <div class="error">@ViewBag.Error</div>
     }
 
     <form asp-action="Login" method="post">
         <label for="username">Tên đăng nhập</label>
-        <input type="text" id="username" name="username" placeholder="Nhập mã nhập học..." required />
+        <input type="text" id="username" name="username" placeholder="Nhập mã nhập học..." value="@ViewBag.Username" required />
 
         <label for="password">Mật khẩu</label>
         <input type="password" id="password" name="password" placeholder="Nhập mật khẩu..." required />
 
         <button type="submit">Đăng nhập</button>
+
+        <p style="text-align:center; margin-top:20px;">
+            <a href="/Auth/ChangePassword">🔁 Đổi mật khẩu?</a>
+        </p>
     </form>
 </div>

@@ -37,7 +37,38 @@ namespace hehehe.Controllers
             }
 
             ViewBag.Error = "Sai tên đăng nhập hoặc mật khẩu.";
+            ViewBag.Username = username;
+
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult ChangePassword()
+        {
+            return View(new ChangePasswordViewModel());
+        }
+
+        [HttpPost]
+        public IActionResult ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var user = _db.Users.FirstOrDefault(u => u.MaNhapHoc == model.MaNhapHoc && u.Password == model.OldPassword);
+
+            if (user != null)
+            {
+                user.Password = model.NewPassword;
+                _db.SaveChanges();
+
+                TempData["Success"] = "Đổi mật khẩu thành công.";
+                return RedirectToAction("Login");
+            }
+
+            ModelState.AddModelError(string.Empty, "Mật khẩu cũ không đúng.");
+            return View(model);
         }
     }
 }
