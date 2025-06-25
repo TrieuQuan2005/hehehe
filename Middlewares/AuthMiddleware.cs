@@ -16,7 +16,6 @@ namespace hehehe.Middlewares
         {
             var path = context.Request.Path.ToString().ToLower();
 
-            // Bỏ qua Auth, static files, favicon...
             if (path.StartsWith("/auth") || path.StartsWith("/css") || path.StartsWith("/js") ||
                 path.StartsWith("/images") || path.Contains(".") || path == "/")
             {

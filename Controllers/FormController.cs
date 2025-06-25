@@ -1,6 +1,5 @@
 ﻿using hehehe.Data;
 using hehehe.Models;
-using hehehe.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,13 +15,11 @@ namespace hehehe.Controllers
     {
         private readonly ApplicationDbContext _db;
         private readonly IWebHostEnvironment _env;
-        private readonly CloudinaryService _cloudinary;
 
-        public FormController(ApplicationDbContext db, IWebHostEnvironment env, CloudinaryService cloudinary)
+        public FormController(ApplicationDbContext db, IWebHostEnvironment env)
         {
             _db = db;
             _env = env;
-            _cloudinary = cloudinary;
         }
 
         [HttpGet]
@@ -54,34 +51,55 @@ namespace hehehe.Controllers
             if (existing != null && existing.IsLocked)
                 return View("Locked", existing);
 
-            var savedFileUrls = new List<string>();
+            var savedFilePaths = new List<string>();
+            var userFolder = Path.Combine("uploads", ma);
+            var absolutePath = Path.Combine(_env.WebRootPath, userFolder);
+            Directory.CreateDirectory(absolutePath);
 
             if (avatar != null && avatar.Length > 0)
             {
-                var avatarUrl = await _cloudinary.UploadImageAsync(avatar, ma);
-                savedFileUrls.Add(avatarUrl);
+                var ext = Path.GetExtension(avatar.FileName);
+                var avatarFileName = $"{ma}_avatar{ext}";
+                var fullPath = Path.Combine(absolutePath, avatarFileName);
+
+                using var stream = new FileStream(fullPath, FileMode.Create);
+                await avatar.CopyToAsync(stream);
+
+                var relativePath = $"/{userFolder.Replace("\\", "/")}/{avatarFileName}";
+                savedFilePaths.Add(relativePath);
             }
 
-            foreach (var file in uploadedFiles)
+            if (uploadedFiles != null && uploadedFiles.Count > 0)
             {
-                if (file.Length > 0)
+                foreach (var file in uploadedFiles)
                 {
-                    var fileUrl = await _cloudinary.UploadRawFileAsync(file, ma);
-                    savedFileUrls.Add(fileUrl);
+                    if (file.Length > 0)
+                    {
+                        var ext = Path.GetExtension(file.FileName);
+                        var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                        var fileName = $"{ma}_{timestamp}_{Guid.NewGuid()}{ext}";
+                        var fullPath = Path.Combine(absolutePath, fileName);
+
+                        using var stream = new FileStream(fullPath, FileMode.Create);
+                        await file.CopyToAsync(stream);
+
+                        var relativePath = $"/{userFolder.Replace("\\", "/")}/{fileName}";
+                        savedFilePaths.Add(relativePath);
+                    }
                 }
             }
-            
+
             if (existing == null)
             {
                 model.MaNhapHoc = ma;
-                model.UploadedFiles = savedFileUrls;
+                model.UploadedFiles = savedFilePaths;
                 model.IsLocked = false;
                 _db.StudentForms.Add(model);
             }
             else
             {
                 model.MaNhapHoc = ma;
-                model.UploadedFiles = existing.UploadedFiles.Concat(savedFileUrls).ToList();
+                model.UploadedFiles = existing.UploadedFiles.Concat(savedFilePaths).ToList();
                 model.IsLocked = false;
 
                 _db.Entry(existing).CurrentValues.SetValues(model);
@@ -93,5 +111,6 @@ namespace hehehe.Controllers
             TempData["Message"] = "Lưu thành công!";
             return View("Success", existing ?? model);
         }
+
     }
 }

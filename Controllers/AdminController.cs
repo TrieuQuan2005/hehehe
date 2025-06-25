@@ -26,7 +26,6 @@ namespace hehehe.Controllers
         }
 
         [HttpGet]
-        [HttpGet]
         public IActionResult Index(string nganh = "", string maNhapHoc = "")
         {
             var allForms = _db.StudentForms
