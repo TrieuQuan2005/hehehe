@@ -81,6 +81,30 @@
         color: #c0392b;
         text-align: center;
     }
+
+    .btn-primary {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 18px;
+        font-size: 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s;
+        font-weight: 500;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #2980b9;
+        transform: scale(1.03);
+    }
+
+    .export-btn-container {
+        margin-top: 30px;
+        text-align: center;
+    }
 </style>
 
 <div class="container">
@@ -143,4 +167,11 @@
     </div>
 
     <p class="note">Lưu ý: Thông tin đã nộp và không thể chỉnh sửa.</p>
+    
+    <!--<div class="export-btn-container">
+        <form asp-action="ExportToWord" asp-controller="Form" method="get">
+            <button type="submit" class="btn btn-primary">📄 Xuất file Word</button>
+        </form>
+    </div>-->
 </div>
+w

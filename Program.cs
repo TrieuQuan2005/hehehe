@@ -1,10 +1,11 @@
 using hehehe.Data;
 using hehehe.Middlewares;
 using Microsoft.EntityFrameworkCore;
-
+using hehehe.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<EmailService>();
 
 builder.Services.AddSession(options =>
 {
@@ -35,5 +36,4 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Auth}/{action=Login}/{id?}");
-
 app.Run();

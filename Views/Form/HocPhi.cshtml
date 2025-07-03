@@ -1,0 +1,150 @@
+﻿<style>
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #c0392b;
+        color: white;
+        padding: 14px 30px;
+        font-family: 'Roboto', sans-serif;
+        border-bottom: 3px solid #a93226;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar .nav-left {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .navbar .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: background 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+        background-color: #922b21;
+    }
+</style>
+
+<div class="navbar">
+    <div class="nav-left">
+        📋 Hệ thống sinh viên
+    </div>
+    <div class="nav-links">
+        <a href="@Url.Action("FormNhapThongTin", "Form")">Form nhập thông tin</a>
+        <a href="@Url.Action("HocPhi", "Form")">Học phí</a>
+        <a href="@Url.Action("Logout", "Auth")">🚪 Đăng xuất</a>
+    </div>
+</div>
+@model hehehe.Models.ViewModels.HocPhiViewModel
+
+@{
+    ViewData["Title"] = "Hướng dẫn nộp học phí";
+    Layout = null;
+}
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to bottom, #e74c3c, #f9ebea);
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        color: white;
+    }
+
+    .header img.logo {
+        height: 90px;
+        margin-right: 20px;
+    }
+
+    .header img.text {
+        height: 45px;
+    }
+
+    .container {
+        max-width: 800px;
+        background: #fff;
+        margin: 30px auto;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+        padding: 8px;
+        background-color: #f2f2f2;
+        border-left: 4px solid #e74c3c;
+    }
+
+    .cost {
+        font-weight: bold;
+        color: #c0392b;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .instruction {
+        margin-top: 20px;
+    }
+    
+    .QrImg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+    }
+
+    .QrImg img {
+        max-width: 240px;
+        height: auto;
+        border: 2px solid #aaa;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+</style>
+
+<div class="header">
+    <img src="~/images/logo.png" class="logo" />
+    <img src="~/images/text.png" class="text" />
+</div>
+
+<div class="container">
+    <div class="QrImg">    
+        <img src="~/images/QR.png" alt="Mã QR học phí" />
+    </div>
+    <h2> Các khoản học phí</h2>
+    <ul>
+        <li>Bảo hiểm Y tế: @Model.BaoHiemYTe.ToString("N0") VNĐ</li>
+        <li>Phí khám sức khỏe: @Model.KhamSucKhoe.ToString("N0") VNĐ</li>
+        <li>Hồ sơ nhập học: @Model.HoSoNhapHoc.ToString("N0") VNĐ</li>
+        <li>Thẻ sinh viên: @Model.TheSinhVien.ToString("N0") VNĐ</li>
+    </ul>
+
+    <p class="cost"> Tổng cộng: @Model.TongTien.ToString("N0") VNĐ</p>
+
+    <div class="instruction">
+        <p>🔔 <strong>Lưu ý khi chuyển khoản:</strong></p>
+        <p>Ghi rõ nội dung: <code>MaNhapHoc_HoVaTen_nop le phi nhap hoc</code></p>      Ví dụ: <code>1023123_NguyenVanA_nop le phi nhap hoc</code>
+        <p>Sinh viên lưu lại ảnh chuyển khoản thành công để làm minh chứng.</p>
+    </div>
+</div>

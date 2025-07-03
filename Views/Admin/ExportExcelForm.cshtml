@@ -1,0 +1,94 @@
+﻿@model hehehe.Models.ViewModels.ExportOptionsViewModel
+@{
+    ViewData["Title"] = "Xuất Excel";
+}
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to bottom, #e74c3c, #f9ebea);
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        color: white;
+    }
+
+    .header img.logo {
+        height: 90px;
+         margin-right: 20px;
+     }
+
+    .header img.text {
+            height: 45px;
+    }
+    h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 30px;
+    }
+
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fefefe;
+        padding: 20px 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    label {
+        display: block;
+                      margin-bottom: 10px;
+    font-weight: 600;
+        : #333;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px 12px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+         background-color: #27ae60;
+         color: white;
+         font-size: 16px;
+         padding: 10px 20px;
+         border: none;
+         border-radius: 6px;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+     }
+
+    button[type="submit"]:hover {
+        background-color: #219150;
+    }
+</style>
+<div class="header">
+    <img src="~/images/logo.png" class="logo" />
+    <img src="~/images/text.png" class="text" />
+</div>
+
+<h2>Xuất danh sách sinh viên theo ngành</h2>
+
+<form asp-action="ExportToExcel" method="post">
+    <label for="SelectedNganh">Chọn ngành đào tạo:</label>
+    <select name="SelectedNganh" id="SelectedNganh">
+        @foreach (var nganh in Model.AvailableNganhs)
+        {
+            <option value="@nganh">@nganh</option>
+        }
+    </select>
+
+    <button type="submit">📥 Xuất Excel</button>
+</form>

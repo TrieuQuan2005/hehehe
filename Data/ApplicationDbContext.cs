@@ -11,21 +11,36 @@ namespace hehehe.Data
         public DbSet<User> Users { get; set; }
 
         public DbSet<UserForm> StudentForms { get; set; }
+        
+        public DbSet<InitUserForm> EduMinisUsers { get; set; }
 
+        public DbSet<YeuCauDinhChinh> YeuCauDinhChinhs { get; set; }
+        
+        public DbSet<UserStdInfo> UserStdInfos { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+            
             modelBuilder.Entity<User>()
-                .HasKey(u => u.MaNhapHoc);
-
+                .HasOne(i => i.InitUserForm)
+                .WithOne(u => u.User)
+                .HasForeignKey<InitUserForm>(i => i.MaNhapHoc)
+                .OnDelete(DeleteBehavior.NoAction);
+            
             modelBuilder.Entity<UserForm>()
-                .HasKey(f => f.MaNhapHoc);
-
+                .HasOne(u => u.InitUserForm)
+                .WithOne(i => i.UserForm)
+                .HasForeignKey<UserForm>(u => u.MaNhapHoc)
+                .OnDelete(DeleteBehavior.NoAction);
+            
             modelBuilder.Entity<User>()
-                .HasOne(u => u.UserForm)
-                .WithOne(f => f.User)
-                .HasForeignKey<UserForm>(f => f.MaNhapHoc);
+                .HasOne(u => u.UserStdInfo)
+                .WithOne(i => i.User)
+                .HasForeignKey<UserStdInfo>(i => i.MaNhapHoc)
+                .OnDelete(DeleteBehavior.NoAction);
+            
         }
+        
     }
 }

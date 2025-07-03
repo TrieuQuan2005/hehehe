@@ -232,3 +232,12 @@ C:\Users\Trieu\hehehe\obj\Debug\net9.0\refint\hehehe.dll
 C:\Users\Trieu\hehehe\obj\Debug\net9.0\hehehe.pdb
 C:\Users\Trieu\hehehe\obj\Debug\net9.0\hehehe.genruntimeconfig.cache
 C:\Users\Trieu\hehehe\obj\Debug\net9.0\ref\hehehe.dll
+C:\Users\Trieu\hehehe\bin\Debug\net9.0\ClosedXML.dll
+C:\Users\Trieu\hehehe\bin\Debug\net9.0\ClosedXML.Parser.dll
+C:\Users\Trieu\hehehe\bin\Debug\net9.0\DocumentFormat.OpenXml.dll
+C:\Users\Trieu\hehehe\bin\Debug\net9.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\Trieu\hehehe\bin\Debug\net9.0\ExcelNumberFormat.dll
+C:\Users\Trieu\hehehe\bin\Debug\net9.0\RBush.dll
+C:\Users\Trieu\hehehe\bin\Debug\net9.0\SixLabors.Fonts.dll
+C:\Users\Trieu\hehehe\bin\Debug\net9.0\System.IO.Packaging.dll
+C:\Users\Trieu\hehehe\bin\Debug\net9.0\DocX.dll

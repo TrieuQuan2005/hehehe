@@ -3,7 +3,7 @@ using hehehe.Data;
 using hehehe.Models;
 using Microsoft.AspNetCore.Http;
 using System.Linq;
-
+using Microsoft.AspNetCore.Identity;
 namespace hehehe.Controllers
 {
     public class AuthController : Controller
@@ -24,6 +24,12 @@ namespace hehehe.Controllers
         [HttpPost]
         public IActionResult Login(string username, string password)
         {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                ViewBag.Error = "Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu.";
+                return View();
+            }
+            
             var user = _db.Users.FirstOrDefault(u => u.MaNhapHoc == username && u.Password == password);
 
             if (user != null)
@@ -45,7 +51,13 @@ namespace hehehe.Controllers
         [HttpGet]
         public IActionResult ChangePassword()
         {
-            return View(new ChangePasswordViewModel());
+            var ma = HttpContext.Session.GetString("MaNhapHoc");
+            if (string.IsNullOrEmpty(ma))
+            {
+                return RedirectToAction("Login");
+            }
+
+            return View(new ChangePasswordViewModel { MaNhapHoc = ma });
         }
 
         [HttpPost]
@@ -60,6 +72,12 @@ namespace hehehe.Controllers
 
             if (user != null)
             {
+                if (model.OldPassword == model.NewPassword)
+                {
+                    ModelState.AddModelError(string.Empty, "Mật khẩu mới không được trùng mật khẩu cũ.");
+                    return View(model);
+                }
+                
                 user.Password = model.NewPassword;
                 _db.SaveChanges();
 
@@ -70,5 +88,13 @@ namespace hehehe.Controllers
             ModelState.AddModelError(string.Empty, "Mật khẩu cũ không đúng.");
             return View(model);
         }
+        
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear(); 
+            return RedirectToAction("Login", "Auth");
+        }
+
     }
 }

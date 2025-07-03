@@ -58,6 +58,8 @@ namespace hehehe.Models
         public bool IsLocked { get; set; } = false;
 
         // Navigation property
-        public User User { get; set; } = null!;
+        public User? User { get; set; }
+        public InitUserForm? InitUserForm { get; set; }
+
     }
 }

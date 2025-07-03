@@ -1,13 +1,43 @@
-﻿
-@model hehehe.Models.UserForm
+﻿<title>Nhập thông tin sinh viên</title>
+@model hehehe.Models.ViewModels.FormViewModel
 @{
     ViewData["Title"] = "Nhập thông tin sinh viên";
     Layout = null;
 }
-@using System.IO
-
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+<style>
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #c0392b;
+        color: white;
+        padding: 14px 30px;
+        font-family: 'Roboto', sans-serif;
+        border-bottom: 3px solid #a93226;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
 
+    .navbar .nav-left {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .navbar .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: background 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+        background-color: #922b21;
+    }
+</style>
 <style>
     body {
         font-family: 'Roboto', sans-serif;
@@ -16,21 +46,20 @@
         margin: 0;
     }
 
-    .header {
+    .Logo {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 20px;
-        background: #e74c3c;
         color: white;
     }
 
-    .header img.logo {
+    .Logo img.logo {
         height: 90px;
         margin-right: 20px;
     }
 
-    .header img.text {
+    .Logo img.text {
         height: 45px;
     }
 
@@ -73,6 +102,27 @@
         font-size: 1.1em;
         margin-top: 30px;
     }
+    .header{
+        text-align: center;
+        margin: 6px;
+    }
+    .header h2 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .header h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .header h4 {
+        font-size: 10px;
+        font-style: italic;
+        font-weight: 400;
+    }
 
     .upload-preview {
         margin-top: 10px;
@@ -106,243 +156,372 @@
         font-size: 0.9em;
         margin-top: 30px;
     }
-    .btn-add-file,
-    .btn-remove-file {
-        margin-top: 10px;
+
+    .upload-line {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    .upload-line span {
+        flex: 1;
+        color: #444;
+    }
+
+    .upload-line input[type="file"] {
+        flex: 1;
+        padding: 6px;
+    }
+
+    .uploaded-item {
+        margin-top: 5px;
+    }
+
+    .uploaded-item a {
+        color: #2980b9;
+        text-decoration: underline;
         margin-right: 10px;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        padding: 8px 14px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 14px;
     }
-
-    .btn-remove-file {
+    .input-with-button {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    .input-with-button input{
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+    .btn-warning{
         background-color: #e74c3c;
+        border: none;
+        color: white;
+        font-size: 14px;
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        cursor: pointer;
+        position: relative;
     }
-
-    .btn-add-file:hover {
-        background-color: #2980b9;
+    .btn-warning::after {
+        content: "Đính chính thông tin";
+        position: absolute;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #555;
+        color: #fff;
+        padding: 6px 10px;
+        font-size: 12px;
+        border-radius: 4px;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+    transition: opacity 0.3s ease;
+        z-index: 10;
     }
-
-    .btn-remove-file:hover {
-        background-color: #c0392b;
+    .btn-warning:hover::after{
+        opacity: 1;    
     }
 </style>
-
-<div class="header">
-    <img src="~/images/logo.png" class="logo" />
-    <img src="~/images/text.png" class="text" />
+<div class="navbar">
+    <div class="nav-left">
+        <div class="Logo">
+            <img src="~/images/logo.png" class="logo" />
+            <img src="~/images/text.png" class="text" />
+        </div>
+    </div>
+    <div class="nav-links">
+        <a href="@Url.Action("FormNhapThongTin", "Form")">Form nhập thông tin</a>
+        <a href="@Url.Action("HocPhi", "Form")">Học phí</a>
+        <a href="@Url.Action("Logout", "Auth")">Đăng xuất</a>
+    </div>
 </div>
 
 <div class="form-container">
+    <div class="header">
+        <h2>Phiếu sinh viên năm 2025</h2>
+        <h3>(Dành cho sinh viên hệ đóng học phí)</h3>
+        <h4>Lưu ý: Sinh viên chỉ hoàn thành form sau khi đã hoàn thành lệ phí</h4>
+    </div>
+    @if (TempData["Message"] != null)
+    {
+    <div style="background-color: #dff0d8; color: #3c763d; padding: 10px; margin-bottom: 15px; border-radius: 4px;">
+        @TempData["Message"]
+    </div>
+    }
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+    <div style="color: red; font-weight: bold; margin-bottom: 20px;">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+        <div>@error.ErrorMessage</div>
+            }
+    </div>
+    }
+    
     <form asp-action="FormNhapThongTin" method="post" enctype="multipart/form-data">
 
         <div class="form-group">
             <label>Upload ảnh chân dung:</label>
-            <input type="file" name="avatar" accept="image/*" onchange="previewImage(this)" />
+            <input type="file" name="avatar" accept="image/*" onchange="previewImage(this)"/>
             @{
-                var avatarPath = Model?.UploadedFiles?.FirstOrDefault(f =>
+                var avatarPath = Model?.FormData?.UploadedFiles?.FirstOrDefault(f =>
                     f.EndsWith(".jpg") || f.EndsWith(".jpeg") || f.EndsWith(".png"));
             }
             @if (!string.IsNullOrEmpty(avatarPath))
             {
-                <img id="avatarPreview" class="upload-preview" src="@avatarPath" />
+                <img id="avatarPreview" class="upload-preview" src="@avatarPath"/>
             }
             else
             {
-                <img id="avatarPreview" class="upload-preview" style="display:none" />
+                <img id="avatarPreview" class="upload-preview" style="display:none"/>
             }
         </div>
 
         <div class="form-group">
             <label>Họ và tên:</label>
-            <input type="text" name="HoTen" value="@Model?.HoTen" required />
+            <div  class="input-with-button">
+                <input type="text" value="@Model?.InitData?.HoTen" readonly class="form-control"/>
+                <button type="button" name="HoTen" class="btn btn-warning" onclick="openDinhChinhModal('HoTen', '@Model?.InitData?.MaNhapHoc')">🛠</button>
+            </div>
         </div>
 
         <div class="form-group-row">
             <div class="form-group">
                 <label>Ngày sinh:</label>
-                <input type="text" name="NgaySinh" value="@(Model?.NgaySinh.ToString("dd/MM/yyyy"))" required />
+                <div class="input-with-button">
+                    <input type="text" name="NgaySinh" value="@Model?.InitData?.NgaySinh.ToString("dd/MM/yyyy")" readonly class="form-control"/>
+                    <button type="button" class="btn btn-warning" onclick="openDinhChinhModal('NgaySinh', '@Model?.InitData?.MaNhapHoc')">🛠</button>
+                </div>
             </div>
             <div class="form-group">
                 <label>Giới tính:</label>
-                <select name="GioiTinh">
-                    <option value="Nam" selected="@(Model?.GioiTinh == "Nam")">Nam</option>
-                    <option value="Nu" selected="@(Model?.GioiTinh == "Nu")">Nữ</option>
-                </select>
+                <div class="input-with-button">
+                    <input type="text" name ="GioiTinh" value="@Model?.InitData?.GioiTinh" readonly class="form-control"/>
+                    <button type="button" class="btn btn-warning" onclick="openDinhChinhModal('GioiTinh', '@Model?.InitData?.MaNhapHoc')">🛠</button>
+                </div>
             </div>
         </div>
 
         <div class="form-group-row">
             <div class="form-group">
                 <label>Nơi sinh:</label>
-                <input type="text" name="NoiSinh" value="@Model?.NoiSinh" required />
+                <div class="input-with-button">
+                    <input type="text" name ="NoiSinh" value="@Model?.InitData?.NoiSinh" readonly class="form-control"/>
+                    <button type="button" class="btn btn-warning" onclick="openDinhChinhModal('NoiSinh', '@Model?.InitData?.MaNhapHoc')">🛠</button>
+                </div>
             </div>
             <div class="form-group">
                 <label>Dân tộc:</label>
-                <input type="text" name="DanToc" value="@Model?.DanToc" required />
+                <div class="input-with-button">
+                    <input type="text" name = "DanToc" value="@Model?.InitData?.DanToc" readonly class="form-control"/>
+                    <button type="button" class="btn btn-warning" onclick="openDinhChinhModal('DanToc', '@Model?.InitData?.MaNhapHoc')">🛠</button>
+                </div>
             </div>
         </div>
 
         <div class="form-group">
             <label>Nơi thường trú:</label>
-            <input type="text" name="NoiThuongTru" value="@Model?.NoiThuongTru" required />
+            <div class="input-with-button">
+                <input type="text" name="NoiThuongTru" value="@Model?.InitData?.NoiThuongTru" readonly class="form-control"/>
+                <button type="button" class="btn btn-warning" onclick="openDinhChinhModal('NoiThuongTru', '@Model?.InitData?.MaNhapHoc')">🛠</button>
+            </div>
         </div>
 
         <div class="form-group">
-            <label>Nơi ở hiện nay:</label>
-            <input type="text" name="ChoOHienNay" value="@Model?.ChoOHienNay" required />
+            <label>Chỗ ở hiện nay:</label>
+            <div class="input-with-button">
+                <input type="text" name="ChoOHienNay" value="@Model?.InitData?.ChoOHienNay" readonly class="form-control"/>
+                <button type="button" class="btn btn-warning" onclick="openDinhChinhModal('ChoOHienNay', '@Model?.InitData?.MaNhapHoc')">🛠</button>
+            </div>
         </div>
 
         <div class="form-group-row">
             <div class="form-group">
                 <label>Đối tượng ưu tiên:</label>
                 <select name="DoiTuongUuTien">
-                    <option value="true" selected="@(Model?.DoiTuongUuTien == true)">Có</option>
-                    <option value="false" selected="@(Model?.DoiTuongUuTien == false)">Không</option>
+                    <option value="true" selected="@(Model?.FormData?.DoiTuongUuTien == true)">Có</option>
+                    <option value="false" selected="@(Model?.FormData?.DoiTuongUuTien == false)">Không</option>
                 </select>
             </div>
             <div class="form-group">
                 <label>Khu vực:</label>
-                <input type="text" name="KhuVuc" value="@Model?.KhuVuc" required />
+                <div class="input-with-button">
+                    <input type="text" name="KhuVuc" value="@Model?.InitData?.KhuVuc" readonly class="form-control"/>
+                    <button type="button" class="btn btn-warning" onclick="openDinhChinhModal('KhuVuc', '@Model?.InitData?.MaNhapHoc')">🛠</button>
+                </div>
             </div>
             <div class="form-group">
                 <label>Năm nhập học:</label>
-                <input type="text" name="NamNhapHoc" value="@Model?.NamNhapHoc" required />
+                <input type="text" name="NamNhapHoc" value="@Model?.FormData?.NamNhapHoc" required/>
             </div>
         </div>
 
         <div class="form-group-row">
             <div class="form-group">
                 <label>Năm tốt nghiệp THPT:</label>
-                <input type="text" name="NamTotNghiepTHPT" value="@Model?.NamTotNghiepTHPT" required />
+                <input type="text" name="NamTotNghiepTHPT" value="@Model?.FormData?.NamTotNghiepTHPT" required/>
             </div>
             <div class="form-group">
                 <label>Năm nhập ngũ:</label>
-                <input type="text" name="NamNhapNgu" value="@Model?.NamNhapNgu" />
+                <input type="text" name="NamNhapNgu" value="@Model?.FormData?.NamNhapNgu"/>
             </div>
             <div class="form-group">
                 <label>Năm xuất ngũ:</label>
-                <input type="text" name="NamXuatNgu" value="@Model?.NamXuatNgu" />
+                <input type="text" name="NamXuatNgu" value="@Model?.FormData?.NamXuatNgu"/>
             </div>
         </div>
 
         <div class="form-group-row">
             <div class="form-group">
                 <label>Ngày vào Đoàn:</label>
-                <input type="text" name="NgayVaoDoan" value="@(Model?.NgayVaoDoan?.ToString("dd/MM/yyyy") ?? "")" required />
+                <input type="text" name="NgayVaoDoan" value="@(Model?.FormData?.NgayVaoDoan?.ToString("dd/MM/yyyy") ?? "")" required/>
             </div>
             <div class="form-group">
                 <label>Ngày vào Đảng:</label>
-                <input type="text" name="NgayVaoDang" value="@(Model?.NgayVaoDang?.ToString("dd/MM/yyyy") ?? "")" />
+                <input type="text" name="NgayVaoDang" value="@(Model?.FormData?.NgayVaoDang?.ToString("dd/MM/yyyy") ?? "")"/>
             </div>
         </div>
 
         <div class="form-group-row">
             <div class="form-group">
                 <label>Số điện thoại:</label>
-                <input type="text" name="SoDienThoai" value="@Model?.SoDienThoai" required />
+                <div class="input-with-button">
+                    <input type="text" name="SoDienThoai" value="@Model?.InitData?.SoDienThoai" readonly class="form-control"/>
+                    <button type="button" class="btn btn-warning" onclick="openDinhChinhModal('SoDienThoai', '@Model?.InitData?.MaNhapHoc')">🛠</button>
+                </div>
             </div>
             <div class="form-group">
                 <label>Email:</label>
-                <input type="email" name="Email" value="@Model?.Email" required />
+                <div class="input-with-button">
+                    <input type="text" name="Email" value="@Model?.InitData?.Email" readonly class="form-control"/>
+                    <button type="button" class="btn btn-warning" onclick="openDinhChinhModal('Email', '@Model?.InitData?.MaNhapHoc')">🛠</button>
+                </div>
             </div>
         </div>
 
         <div class="form-group">
             <label>Ngành đào tạo:</label>
-            <select name="NganhDaoTao">
-                <option value="An toàn thông tin" selected="@(Model?.NganhDaoTao == "An toàn thông tin")">An toàn thông tin</option>
-                <option value="Công nghệ thông tin" selected="@(Model?.NganhDaoTao == "Công nghệ thông tin")">Công nghệ thông tin</option>
-                <option value="Điện tử vi mạch" selected="@(Model?.NganhDaoTao == "Điện tử vi mạch")">Điện tử vi mạch</option>
-            </select>
+            <div class="input-with-button">
+                <input type="text" name="NganhDaoTao" value="@Model?.InitData?.NganhDaoTao" readonly class="form-control"/>
+                <button type="button" class="btn btn-warning" onclick="openDinhChinhModal('NganhDaoTao', '@Model?.InitData?.MaNhapHoc')">🛠</button>
+            </div>
         </div>
 
         <div class="section-title">Thông tin gia đình:</div>
         <div class="form-group-row">
             <div class="form-group">
                 <label>Họ tên bố:</label>
-                <input type="text" name="HoTenBo" value="@Model?.HoTenBo" required />
+                <input type="text" name="HoTenBo" value="@Model?.FormData?.HoTenBo" required/>
             </div>
             <div class="form-group">
                 <label>Tuổi bố:</label>
-                <input type="number" name="TuoiBo" value="@Model?.TuoiBo" required />
+                <input type="number" name="TuoiBo" value="@Model?.FormData?.TuoiBo" required/>
             </div>
             <div class="form-group">
                 <label>Nghề nghiệp:</label>
-                <input type="text" name="NgheNghiepBo" value="@Model?.NgheNghiepBo" required />
+                <input type="text" name="NgheNghiepBo" value="@Model?.FormData?.NgheNghiepBo" required/>
             </div>
             <div class="form-group">
                 <label>SĐT:</label>
-                <input type="text" name="SoDienThoaiBo" value="@Model?.SoDienThoaiBo" required />
+                <input type="text" name="SoDienThoaiBo" value="@Model?.FormData?.SoDienThoaiBo" required/>
             </div>
         </div>
 
         <div class="form-group-row">
             <div class="form-group">
                 <label>Họ tên mẹ:</label>
-                <input type="text" name="HoTenMe" value="@Model?.HoTenMe" required />
+                <input type="text" name="HoTenMe" value="@Model?.FormData?.HoTenMe" required/>
             </div>
             <div class="form-group">
                 <label>Tuổi mẹ:</label>
-                <input type="number" name="TuoiMe" value="@Model?.TuoiMe" required />
+                <input type="number" name="TuoiMe" value="@Model?.FormData?.TuoiMe" required/>
             </div>
             <div class="form-group">
                 <label>Nghề nghiệp:</label>
-                <input type="text" name="NgheNghiepMe" value="@Model?.NgheNghiepMe" required />
+                <input type="text" name="NgheNghiepMe" value="@Model?.FormData?.NgheNghiepMe" required/>
             </div>
             <div class="form-group">
                 <label>SĐT:</label>
-                <input type="text" name="SoDienThoaiMe" value="@Model?.SoDienThoaiMe" required />
+                <input type="text" name="SoDienThoaiMe" value="@Model?.FormData?.SoDienThoaiMe" required/>
             </div>
         </div>
 
         <div class="form-group">
             <label>Khi cần báo tin cho ai:</label>
-            <input type="text" name="BaoTinChoAi" value="@Model?.BaoTinChoAi" required />
+            <input type="text" name="BaoTinChoAi" value="@Model?.FormData?.BaoTinChoAi" required/>
         </div>
 
         <div class="form-group">
             <label>Địa chỉ liên hệ:</label>
-            <input type="text" name="DiaChiLienHe" value="@Model?.DiaChiLienHe" required />
+            <input type="text" name="DiaChiLienHe" value="@Model?.FormData?.DiaChiLienHe" required/>
         </div>
 
         <div class="form-group">
             <label>Upload file bổ sung (PDF/PNG):</label>
-            <div id="fileUploadContainer">
-                <input type="file" name="uploadedFiles" multiple/>
-            </div>
-    
-            <button type="button" class="btn-add-file" onclick="addFileInput()">➕ Thêm file</button>
+            <p>Lưu ý, thí sinh upload đủ các file cần bổ sung bao gồm:</p>
 
-            @for (int i = 0; i < Model.UploadedFiles?.Count; i++)
+            <div class="upload-line">
+                <span>+, Học bạ THPT:</span>
+                <input type="file" name="uploadedFiles" />
+            </div>
+            <div class="upload-line">
+                <span>+, Giấy báo trúng tuyển:</span>
+                <input type="file" name="uploadedFiles" />
+            </div>
+            <div class="upload-line">
+                <span>+, Giấy chứng nhận tốt nghiệp tạm thời:</span>
+                <input type="file" name="uploadedFiles" />
+            </div>
+            <div class="upload-line">
+                <span>+, Căn cước công dân:</span>
+                <input type="file" name="uploadedFiles" />
+            </div>
+            <div class="upload-line">
+                <span>+, Giấy khai sinh:</span>
+                <input type="file" name="uploadedFiles" />
+            </div>
+            <div class="upload-line">
+                <span>+, Sơ yếu lý lịch HSSV:</span>
+                <input type="file" name="uploadedFiles" />
+            </div>
+            <div class="upload-line">
+                <span>+, Minh chứng lệ phí (file .png):</span>
+                <input type="file" name="uploadedFiles" />
+            </div>
+
+            @if (Model?.FormData?.UploadedFiles?.Count != 0)
             {
-                var filePath = Model.UploadedFiles[i];
-                var fileName = !string.IsNullOrEmpty(filePath) ? System.IO.Path.GetFileName(filePath) : "Tên file không xác định";
-                
-                <div id="uploaded-file-@i">
-                    <a href="@filePath" target="_blank">@fileName</a>
-                    <button type="button" onclick="removeFile(@i)">❌</button>
-                    <input type="hidden" name="UploadedFiles[@i]" value="@filePath" />
-                </div>
-                
-                <input type="hidden" name="UploadedFiles[@i]" value="@filePath" />
+                <div>File đã uploaded: </div>
+                for (int i = 0; i < Model.FormData.UploadedFiles.Count; i++)
+                {
+                    var filePath = Model.FormData.UploadedFiles[i];
+                    var fileName = filePath?.Split('/').Last() ?? "Tên file không xác định";
+
+                    <div id="uploaded-file-@i">
+                        <a href="@filePath" target="_blank">@fileName</a>
+                        <input type="hidden" name="UploadedFiles[@i]" value="@filePath" />
+                        <button type="button" onclick="removeFile(@i)">❌ Xoá</button>
+                    </div>
+
+                }
             }
         </div>
-        
-        <div>
-            * Chú ý: Hãy kiểm tra thật kỹ thông tin trước khi xác nhận <br />
-        </div>
+
+        <div>* Chú ý: Hãy kiểm tra thật kỹ thông tin trước khi xác nhận <br/></div>
 
         <button type="submit" class="submit-button">Lưu thông tin</button>
 
         <div class="note">
-            <strong>Ghi chú:</strong><br />
-            - Họ và tên: Ghi chữ in hoa; Đối tượng ưu tiên: Ghi theo hồ sơ ĐKDT<br />
-            - Chỗ ở hiện nay: Ghi rõ số nhà, tổ/xóm, phường/xã/thị trấn, quận/huyện, tỉnh/TP.<br />
+            <strong>Ghi chú:</strong><br/>
+            - Họ và tên: Ghi chữ in hoa; Đối tượng ưu tiên: Ghi theo hồ sơ ĐKDT<br/>
+            - Chỗ ở hiện nay: Ghi rõ số nhà, tổ/xóm, phường/xã/thị trấn, quận/huyện, tỉnh/TP.<br/>
             - Thí sinh điền đầy đủ thông tin vào Phiếu sinh viên, nộp kèm Hồ sơ khi đến nhập học.
         </div>
     </form>
@@ -361,23 +540,82 @@
             reader.readAsDataURL(file);
         }
     }
-</script>
-<script>
+
     function addFileInput() {
-    const container = document.getElementById("fileUploadContainer");
-    const newInput = document.createElement("input");
-    newInput.type = "file";
-    newInput.name = "uploadedFiles";
-    newInput.accept = ".pdf,.png";
-    newInput.style.marginTop = "10px";
-    container.appendChild(newInput);
+        const container = document.getElementById("fileUploadContainer");
+        const newInput = document.createElement("input");
+        newInput.type = "file";
+        newInput.name = "uploadedFiles";
+        newInput.accept = ".pdf,.png";
+        newInput.style.marginTop = "10px";
+        container.appendChild(newInput);
+    }
+
+    let currentField = "";
+    
+    function openDinhChinhModal(fieldName,  maNhapHoc) {
+    document.getElementById("modalFieldName").innerText = "Trường: " + fieldName;
+    document.getElementById("inputFieldName").value = fieldName;
+    document.getElementById("inputMaNhapHoc").value = maNhapHoc;
+
+    document.getElementById("dinhChinhModal").style.display = "block";
+    }
+
+    function closeDinhChinhModal() {
+    document.getElementById("dinhChinhModal").style.display = "none";
     }
 
 
-    function removeFile(index) {
-    const container = document.getElementById("uploaded-file-" + index);
-    if (container) container.remove();
+    function submitDinhChinh() {
+        const newValue = document.getElementById("dinhChinhValue").value;
+        if (!newValue) {
+            alert("Bạn chưa nhập giá trị mới.");
+            return;
+        }
 
+        const hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = "DinhChinh_" + currentField;
+        hiddenInput.value = newValue;
+        document.querySelector("form").appendChild(hiddenInput);
+
+        closeDinhChinhModal();
+        alert("Đã lưu yêu cầu đính chính cho " + currentField);
+    }
+    function removeFile(index) {
+    var fileDiv = document.getElementById("uploaded-file-" + index);
+    if (fileDiv) {
+        var filePath = document.querySelector(`#uploaded-file-${index} input[type=hidden]`).value;
+        var hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = "FilesToDelete";
+        hiddenInput.value = filePath;
+
+        document.querySelector("form").appendChild(hiddenInput);
+
+        fileDiv.remove();
+    }   
 }
+
 </script>
+
+
+
+<div id="dinhChinhModal" style="display:none; position:fixed; top:30%; left:35%; background:#fff; padding:20px; border:1px solid #aaa; border-radius:6px; box-shadow: 0 0 10px #000;">
+    <form id="formDinhChinh" method="post" enctype="multipart/form-data" asp-controller="Form" asp-action="GuiYeuCauDinhChinh">
+        <h4>🛠 Đính chính thông tin</h4>
+        <p id="modalFieldName"></p>
+
+        <input type="hidden" name="MaNhapHoc" id="inputMaNhapHoc" />
+        <input type="hidden" name="TruongCanDinhChinh" id="inputFieldName" />
+
+        <input type="text" name="GiaTriMoi" id="dinhChinhValue" placeholder="Giá trị mới..." style="width:100%; padding:8px;" required />
+        <br /><br />
+        <input type="file" name="file" required/>
+
+        <br /><br />
+        <button type="submit">Xác nhận</button>
+        <button type="button" onclick="closeDinhChinhModal()">Hủy</button>
+    </form>
+</div>
 

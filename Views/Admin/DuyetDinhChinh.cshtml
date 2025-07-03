@@ -1,0 +1,76 @@
+﻿@model List<hehehe.Models.YeuCauDinhChinh>
+@{
+    ViewData["Title"] = "Duyệt yêu cầu đính chính";
+}
+
+<h2>📝 Danh sách yêu cầu đính chính</h2>
+
+@if (!Model.Any())
+{
+    <p>✅ Không có yêu cầu đính chính nào đang chờ xử lý.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Mã nhập học</th>
+                <th>Trường cần đính chính</th>
+                <th>Giá trị mới</th>
+                <th>Minh chứng</th>
+                <th>Ngày gửi</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var yc in Model)
+            {
+                <tr>
+                    <td>@yc.MaNhapHoc</td>
+                    <td>@yc.TruongCanDinhChinh</td>
+                    <td>@yc.GiaTriMoi</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(yc.FileMinhChung))
+                        {
+                            <a href="@Url.Content($"~/MinhChung/{yc.FileMinhChung}")" target="_blank">Xem file</a>
+                        }
+                        else
+                        {
+                            <em>Không có</em>
+                        }
+                    </td>
+                    <td>@yc.NgayGui.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>
+                        @if (yc.DaDuyet)
+                        {
+                            <span style="color: green;">✔️ Đã duyệt</span>
+                        }
+                        else if (yc.BiTuChoi)
+                        {
+                            <span style="color: red;">❌ Bị từ chối</span>
+                        }
+                        else
+                        {
+                            <form asp-action="DuyetYeuCau" method="post" style="display:inline;">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@yc.Id" />
+                                <button type="submit" class="btn btn-success btn-sm">✔️ Duyệt</button>
+                            </form>
+
+                            <button type="button" class="btn btn-danger btn-sm" onclick="document.getElementById('rejectForm-@yc.Id').style.display='block'">❌ Từ chối</button>
+
+                            <div id="rejectForm-@yc.Id" style="display:none; margin-top: 8px;">
+                                <form asp-action="TuChoiYeuCau" method="post">
+                                    <input type="hidden" name="id" value="@yc.Id" />
+                                    <textarea name="GhiChuAdmin" rows="2" class="form-control" required placeholder="Lý do từ chối..."></textarea>
+                                    <button type="submit" class="btn btn-warning btn-sm" style="margin-top: 4px;">Gửi từ chối</button>
+                                </form>
+                            </div>
+                        }
+                    </td>
+y
+                </tr>
+            }
+        </tbody>
+    </table>
+}

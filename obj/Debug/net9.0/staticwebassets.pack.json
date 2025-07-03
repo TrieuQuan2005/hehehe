@@ -5,12 +5,44 @@
       "PackagePath": "staticwebassets\\hehehe.mwwvnplldc.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\MinhChung\\05a064d8-f1f1-448e-b63c-3571f9484334_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf",
+      "PackagePath": "staticwebassets\\MinhChung\\05a064d8-f1f1-448e-b63c-3571f9484334_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\MinhChung\\555e516b-7085-494f-910c-abd3acbd195b_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf",
+      "PackagePath": "staticwebassets\\MinhChung\\555e516b-7085-494f-910c-abd3acbd195b_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\MinhChung\\6dda0156-c52d-45bf-b9b5-d359e6291e47_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam 1.pdf",
+      "PackagePath": "staticwebassets\\MinhChung\\6dda0156-c52d-45bf-b9b5-d359e6291e47_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam 1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\MinhChung\\819b20e9-478b-4b82-917a-969caebdca7e_Nghiên cứu Khoa học 2025.pdf",
+      "PackagePath": "staticwebassets\\MinhChung\\819b20e9-478b-4b82-917a-969caebdca7e_Nghiên cứu Khoa học 2025.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\MinhChung\\8c1527b4-59a3-45d2-9ed2-576fe9c657c5_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf",
+      "PackagePath": "staticwebassets\\MinhChung\\8c1527b4-59a3-45d2-9ed2-576fe9c657c5_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\MinhChung\\f62c337a-8de8-49fe-8fa9-3ad759dc42c0_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf",
+      "PackagePath": "staticwebassets\\MinhChung\\f62c337a-8de8-49fe-8fa9-3ad759dc42c0_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\Templates\\ThongTinSinhVien_Template.docx",
+      "PackagePath": "staticwebassets\\Templates\\ThongTinSinhVien_Template.docx"
+    },
+    {
       "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\images\\QR.png",
+      "PackagePath": "staticwebassets\\images\\QR.png"
     },
     {
       "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\images\\logo.png",
@@ -265,52 +297,60 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
-      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.pdf",
-      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250624_135710_31de2d29-85c8-4e04-89eb-90228f8f4e14.pdf"
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\AT200147\\AT200147_20250627_150915_36568cf3-c1e8-419e-95a1-41b37e2fe959.pdf",
+      "PackagePath": "staticwebassets\\uploads\\AT200147\\AT200147_20250627_150915_36568cf3-c1e8-419e-95a1-41b37e2fe959.pdf"
     },
     {
-      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.pdf",
-      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250624_135710_458ced22-ab20-43c2-ab85-14bfa4cf8e39.pdf"
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\AT200147\\AT200147_20250627_150915_bc6c14cf-66e7-4766-92af-bc96e7cd9996.pdf",
+      "PackagePath": "staticwebassets\\uploads\\AT200147\\AT200147_20250627_150915_bc6c14cf-66e7-4766-92af-bc96e7cd9996.pdf"
     },
     {
-      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.pdf",
-      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250624_135710_48b3870b-2157-459e-8d06-3044fc208228.pdf"
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\AT200147\\AT200147_20250627_150915_c2fa87a1-c981-4920-bcbb-fd0365c8220f.pdf",
+      "PackagePath": "staticwebassets\\uploads\\AT200147\\AT200147_20250627_150915_c2fa87a1-c981-4920-bcbb-fd0365c8220f.pdf"
     },
     {
-      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.pdf",
-      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250624_135710_81a2444b-d6fd-4bb8-a9bf-2934c92a87d5.pdf"
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\AT200147\\AT200147_avatar.jpg",
+      "PackagePath": "staticwebassets\\uploads\\AT200147\\AT200147_avatar.jpg"
     },
     {
-      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.pdf",
-      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250624_135710_e8de3d49-263e-4a47-99da-117acb5a4a1a.pdf"
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\AT200147\\AT200147_avatar.png",
+      "PackagePath": "staticwebassets\\uploads\\AT200147\\AT200147_avatar.png"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250627_042754_3a6f2541-8c89-471e-88ec-c5d4d798acd3.pdf",
+      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250627_042754_3a6f2541-8c89-471e-88ec-c5d4d798acd3.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250627_042754_b5e7480a-c2b0-4ef0-bd24-0b4401a8cc56.pdf",
+      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250627_042754_b5e7480a-c2b0-4ef0-bd24-0b4401a8cc56.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250627_210818_45e29dd3-1518-4c42-862a-140a9b71839a.pdf",
+      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250627_210818_45e29dd3-1518-4c42-862a-140a9b71839a.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250627_210818_c7707873-d6e2-49d9-ac1e-24d5959bafac.pdf",
+      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250627_210818_c7707873-d6e2-49d9-ac1e-24d5959bafac.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250627_210818_ca8d799a-b855-42dc-931c-914f0a9a310f.pdf",
+      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250627_210818_ca8d799a-b855-42dc-931c-914f0a9a310f.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250627_210819_51648190-c6ff-49aa-8391-0573a34a6d69.pdf",
+      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250627_210819_51648190-c6ff-49aa-8391-0573a34a6d69.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_20250702_084354_bc9830a9-4914-4847-a542-dbaea4775c5c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_20250702_084354_bc9830a9-4914-4847-a542-dbaea4775c5c.pdf"
     },
     {
       "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_avatar.jpg",
       "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_avatar.jpg"
     },
     {
-      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.pdf",
-      "PackagePath": "staticwebassets\\uploads\\DT200147\\DT200147_20250624_072153_2f48c43a-a12c-415a-bc5b-91bef0af0ce5.pdf"
-    },
-    {
-      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.pdf",
-      "PackagePath": "staticwebassets\\uploads\\DT200147\\DT200147_20250624_072153_70b986db-54fc-4992-8b79-33f1a1d51405.pdf"
-    },
-    {
-      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.pdf",
-      "PackagePath": "staticwebassets\\uploads\\DT200147\\DT200147_20250624_072153_86978139-9790-4928-a8a7-277267e7d51a.pdf"
-    },
-    {
-      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.pdf",
-      "PackagePath": "staticwebassets\\uploads\\DT200147\\DT200147_20250624_072153_9a29c00b-c0b1-46b4-a8e2-b79551b533cb.pdf"
-    },
-    {
-      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.pdf",
-      "PackagePath": "staticwebassets\\uploads\\DT200147\\DT200147_20250624_072153_aa55bb78-86e6-4105-bd33-c93050228548.pdf"
-    },
-    {
-      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.pdf",
-      "PackagePath": "staticwebassets\\uploads\\DT200147\\DT200147_20250624_072153_c43d93a5-7703-48c3-bb9f-754b523d3865.pdf"
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_avatar.png",
+      "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_avatar.png"
     },
     {
       "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_avatar.jpg",
