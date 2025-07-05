@@ -61,7 +61,8 @@ else
 
                             <div id="rejectForm-@yc.Id" style="display:none; margin-top: 8px;">
                                 <form asp-action="TuChoiYeuCau" method="post">
-                                    <input type="hidden" name="id" value="@yc.Id" />
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@yc.Id"/>
                                     <textarea name="GhiChuAdmin" rows="2" class="form-control" required placeholder="Lý do từ chối..."></textarea>
                                     <button type="submit" class="btn btn-warning btn-sm" style="margin-top: 4px;">Gửi từ chối</button>
                                 </form>

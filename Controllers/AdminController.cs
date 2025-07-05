@@ -69,6 +69,7 @@ namespace hehehe.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult ToggleLock(string id)
         {
             if (!IsAdmin()) return Unauthorized();
@@ -129,8 +130,8 @@ namespace hehehe.Controllers
             return View("DuyetDinhChinh",danhSach);
         }
         
-        [ValidateAntiForgeryToken]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult DuyetYeuCau(int id)
         {
             if (!IsAdmin()) return Unauthorized();
@@ -175,6 +176,7 @@ namespace hehehe.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult TuChoiYeuCau(int id, string GhiChuAdmin)
         {
             if (!IsAdmin()) return Unauthorized();
@@ -221,14 +223,12 @@ namespace hehehe.Controllers
         }
 
         [HttpPost]
-        public IActionResult ExportToExcel(string SelectedNganh)
+        [ValidateAntiForgeryToken]
+        public IActionResult ExportToExcel(string selectedNganh)
         {
             
             var data = _db.StudentForms.ToList();
-            if (SelectedNganh != "All") data = _db.StudentForms.Where(u => u.NganhDaoTao == SelectedNganh).ToList();
-            
-            
-            
+            if (selectedNganh != "All") data = _db.StudentForms.Where(u => u.NganhDaoTao == selectedNganh).ToList();
 
             using (var workbook = new XLWorkbook())
             {
@@ -271,7 +271,6 @@ namespace hehehe.Controllers
                 // Dữ liệu
                 foreach (var user in data)
                 { 
-                    worksheet.Columns().AdjustToContents();
                     currentRow++; 
                     worksheet.Cell(currentRow, 1).Value = currentRow-1;
                     worksheet.Cell(currentRow, 2).Value = user.MaNhapHoc;
@@ -304,14 +303,14 @@ namespace hehehe.Controllers
                     worksheet.Cell(currentRow, 29).Value = user.BaoTinChoAi;
                     worksheet.Cell(currentRow, 30).Value = user.DiaChiLienHe;
                 }
-
+                worksheet.Columns().AdjustToContents();
                 using (var stream = new MemoryStream())
                 {
                     workbook.SaveAs(stream);
                     var content = stream.ToArray();
                     return File(content,
                         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                        $"DanhSach_{SelectedNganh}_{DateTime.Now:yyyyMMdd}.xlsx");
+                        $"DanhSach_{selectedNganh}_{DateTime.Now:yyyyMMdd}.xlsx");
                 }
             }
         }

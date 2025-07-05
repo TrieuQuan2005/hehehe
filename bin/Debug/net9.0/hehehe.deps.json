@@ -10,7 +10,6 @@
         "dependencies": {
           "ClosedXML": "0.105.0",
           "CloudinaryDotNet": "1.27.6",
-          "DocX": "1.0.0.19",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.6"
         },
@@ -108,14 +107,6 @@
           "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
             "assemblyVersion": "3.1.1.0",
             "fileVersion": "3.1.1.0"
-          }
-        }
-      },
-      "DocX/1.0.0.19": {
-        "runtime": {
-          "lib/net40/DocX.dll": {
-            "assemblyVersion": "1.0.0.19",
-            "fileVersion": "1.0.0.19"
           }
         }
       },
@@ -1530,13 +1521,6 @@
       "sha512": "sha512-6APEp/ElZV58S/4v8mf4Ke3ONEDORs64MqdD64Z7wWpcHANB9oovQsGIwtqjnKihulOj7T0a6IxHIHOfMqKOng==",
       "path": "documentformat.openxml.framework/3.1.1",
       "hashPath": "documentformat.openxml.framework.3.1.1.nupkg.sha512"
-    },
-    "DocX/1.0.0.19": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ZoKdoM2ZlZ5bCBEtJHrTJMHICW3o9wsh6tStdqIXHh9mCjb+7o4+w5e6DWyNy2nnS5X7Q/eCFYQtyhInWMyc7w==",
-      "path": "docx/1.0.0.19",
-      "hashPath": "docx.1.0.0.19.nupkg.sha512"
     },
     "ExcelNumberFormat/1.1.0": {
       "type": "package",

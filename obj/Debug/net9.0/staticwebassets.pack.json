@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\MinhChung\\05a064d8-f1f1-448e-b63c-3571f9484334_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf"
     },
     {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\MinhChung\\21f402c6-8f1d-455e-9d9b-f87b98d9e9d8_ngan-hang-cau-hoi-lich-su-dang-cong-san-viet-nam-lsd.pdf",
+      "PackagePath": "staticwebassets\\MinhChung\\21f402c6-8f1d-455e-9d9b-f87b98d9e9d8_ngan-hang-cau-hoi-lich-su-dang-cong-san-viet-nam-lsd.pdf"
+    },
+    {
       "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\MinhChung\\555e516b-7085-494f-910c-abd3acbd195b_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf",
       "PackagePath": "staticwebassets\\MinhChung\\555e516b-7085-494f-910c-abd3acbd195b_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf"
     },
@@ -351,6 +355,10 @@
     {
       "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\CT200147\\CT200147_avatar.png",
       "PackagePath": "staticwebassets\\uploads\\CT200147\\CT200147_avatar.png"
+    },
+    {
+      "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_avatar.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\DT200147\\DT200147_avatar.jpeg"
     },
     {
       "Id": "C:\\Users\\Trieu\\hehehe\\wwwroot\\uploads\\DT200147\\DT200147_avatar.jpg",

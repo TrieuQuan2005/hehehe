@@ -1224,6 +1224,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MinhChung\05a064d8-f1f1-448e-b63c-3571f9484334_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MinhChung\21f402c6-8f1d-455e-9d9b-f87b98d9e9d8_ngan-hang-cau-hoi-lich-su-dang-cong-san-viet-nam-lsd.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>MinhChung/21f402c6-8f1d-455e-9d9b-f87b98d9e9d8_ngan-hang-cau-hoi-lich-su-dang-cong-san-viet-nam-lsd.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3ankyhptyd</Fingerprint>
+      <Integrity>28h2fpL49MYQYo9tUTB03aditdbgMgUSYWnOtYtklzA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MinhChung\21f402c6-8f1d-455e-9d9b-f87b98d9e9d8_ngan-hang-cau-hoi-lich-su-dang-cong-san-viet-nam-lsd.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MinhChung\555e516b-7085-494f-910c-abd3acbd195b_Lịch sử các kỳ đại hội đại biểu toàn quốc của Đảng Cộng sản Việt Nam.pdf'))">
       <SourceType>Package</SourceType>
       <SourceId>hehehe</SourceId>
@@ -1583,6 +1601,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CT200147\CT200147_avatar.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_avatar.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>hehehe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/hehehe</BasePath>
+      <RelativePath>uploads/DT200147/DT200147_avatar.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jtxe254wfh</Fingerprint>
+      <Integrity>SaelriDAzLzyvYfJtKvbT5KyTKrojJ6+DvfRvrnTYVU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_avatar.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\DT200147\DT200147_avatar.jpg'))">
       <SourceType>Package</SourceType>

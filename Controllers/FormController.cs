@@ -2,7 +2,6 @@
 using hehehe.Models;
 using hehehe.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using hehehe.Models.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System.IO;
@@ -10,7 +9,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System;
 using System.Collections.Generic;
-using Novacode;
 namespace hehehe.Controllers
 {
     public class FormController : Controller
@@ -47,16 +45,15 @@ namespace hehehe.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> FormNhapThongTin(UserForm model, List<IFormFile> uploadedFiles, IFormFile avatar, List<string>? FilesToDelete)
         {
             var ma = HttpContext.Session.GetString("MaNhapHoc");
             if (string.IsNullOrEmpty(ma)) return RedirectToAction("Login", "Auth");
             var formData = _db.StudentForms.FirstOrDefault(x => x.MaNhapHoc == ma);
             if (formData != null && formData.IsLocked) return View("Locked", formData);
-
             
             var initData = _db.EduMinisUsers.FirstOrDefault(x => x.MaNhapHoc == ma);
-
             
             var savedFilePaths = new List<string>();
             var userFolder = Path.Combine("uploads", ma);
@@ -202,6 +199,7 @@ namespace hehehe.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult GuiYeuCauDinhChinh(YeuCauDinhChinh model, IFormFile? file)
         {
             if (!ModelState.IsValid) return RedirectToAction("FormNhapThongTin");

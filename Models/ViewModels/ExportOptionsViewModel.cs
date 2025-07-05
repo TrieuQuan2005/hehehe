@@ -2,7 +2,7 @@
 {
     public class ExportOptionsViewModel
     {
-        public string SelectedNganh { get; set; }
-        public List<string> AvailableNganhs { get; set; }
+        public string SelectedNganh { get; set; } = ""; 
+        public List<string> AvailableNganhs { get; set; } = new();  
     }
 }

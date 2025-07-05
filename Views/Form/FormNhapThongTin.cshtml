@@ -266,7 +266,7 @@
     }
     
     <form asp-action="FormNhapThongTin" method="post" enctype="multipart/form-data">
-
+        @Html.AntiForgeryToken()
         <div class="form-group">
             <label>Upload ảnh chân dung:</label>
             <input type="file" name="avatar" accept="image/*" onchange="previewImage(this)"/>
@@ -495,7 +495,10 @@
                 <span>+, Minh chứng lệ phí (file .png):</span>
                 <input type="file" name="uploadedFiles" />
             </div>
-
+            <div class="upload-line">
+                <span>+, Các files khác: </span>
+                <input type="file" name="uploadedFiles" multiple />
+            </div>
             @if (Model?.FormData?.UploadedFiles?.Count != 0)
             {
                 <div>File đã uploaded: </div>
@@ -603,6 +606,7 @@
 
 <div id="dinhChinhModal" style="display:none; position:fixed; top:30%; left:35%; background:#fff; padding:20px; border:1px solid #aaa; border-radius:6px; box-shadow: 0 0 10px #000;">
     <form id="formDinhChinh" method="post" enctype="multipart/form-data" asp-controller="Form" asp-action="GuiYeuCauDinhChinh">
+        @Html.AntiForgeryToken()
         <h4>🛠 Đính chính thông tin</h4>
         <p id="modalFieldName"></p>
 

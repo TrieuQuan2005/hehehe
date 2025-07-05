@@ -240,4 +240,3 @@ C:\Users\Trieu\hehehe\bin\Debug\net9.0\ExcelNumberFormat.dll
 C:\Users\Trieu\hehehe\bin\Debug\net9.0\RBush.dll
 C:\Users\Trieu\hehehe\bin\Debug\net9.0\SixLabors.Fonts.dll
 C:\Users\Trieu\hehehe\bin\Debug\net9.0\System.IO.Packaging.dll
-C:\Users\Trieu\hehehe\bin\Debug\net9.0\DocX.dll

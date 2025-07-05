@@ -82,6 +82,7 @@
 <h2>Xuất danh sách sinh viên theo ngành</h2>
 
 <form asp-action="ExportToExcel" method="post">
+    @Html.AntiForgeryToken()
     <label for="SelectedNganh">Chọn ngành đào tạo:</label>
     <select name="SelectedNganh" id="SelectedNganh">
         @foreach (var nganh in Model.AvailableNganhs)

@@ -54,6 +54,7 @@
 </div>
 <!-- Form bộ lọc -->
 <form method="get" style="margin-bottom: 20px;">
+    @Html.AntiForgeryToken()
     <select name="nganh" style="padding: 6px;">
         <option value="">-- Tất cả ngành --</option>
         <option value="An toàn thông tin" selected="@(nganh == "An toàn thông tin")">An toàn thông tin</option>
@@ -61,7 +62,7 @@
         <option value="Điện tử vi mạch" selected="@(nganh == "Điện tử vi mạch")">Điện tử vi mạch</option>
     </select>
 
-    <input type="text" name="maNhapHoc" placeholder="Tìm theo mã nhập học" value="@maNhapHoc" style="padding: 6px; width: 200px; margin-left: 10px;" />
+    <input type="text" name="maNhapHoc" placeholder="Tìm theo mã nhập học" value="@maNhapHoc" style="padding: 6px; width: 200px; margin-left: 10px;"/>
 
     <button type="submit" style="padding: 6px 12px; margin-left: 10px;">🔍 Lọc</button>
 </form>
